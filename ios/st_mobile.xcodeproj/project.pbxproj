@@ -1,0 +1,804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* st_mobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* st_mobileTests.m */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D8856EF234B008A6CF195BB8 /* libPods-st_mobile-st_mobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7EAA2C39FABB3DEA112DA6 /* libPods-st_mobile-st_mobileTests.a */; };
+		FC5E703B777BE91E8C2B9878 /* libPods-st_mobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7050310454257AE941189D /* libPods-st_mobile.a */; };
+		CA005259DDC740F7B107BCDC /* caros_black_italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 434F209636444C6CBE72180A /* caros_black_italic.woff */; };
+		F9E3C95FAD354F3C95C77D77 /* caros_black.woff in Resources */ = {isa = PBXBuildFile; fileRef = EB17723D4B014B458766DA84 /* caros_black.woff */; };
+		2409209CEA214028828A3DE2 /* caros_bold_italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = D65AD8839E824A47B1EDDFAA /* caros_bold_italic.woff */; };
+		E78CCA4047F943679564205C /* caros_bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = A424BE3D926543BFAC04E439 /* caros_bold.woff */; };
+		A4D5481B4A5648AD82DB8520 /* caros_extrabold_italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = A6DA5E32491940EB89D0782F /* caros_extrabold_italic.woff */; };
+		DA086C0AF6204D59877BEDDE /* caros_extrabold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 155C291BACBF40679DED82E3 /* caros_extrabold.woff */; };
+		6662FFEF40DD4045B57533EA /* caros_extralight_italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = B79A081494704845A1B69793 /* caros_extralight_italic.woff */; };
+		9E3ABE990FA24C47B3E1B13A /* caros_extralight.woff in Resources */ = {isa = PBXBuildFile; fileRef = 2540FBA6580C47F7812AB413 /* caros_extralight.woff */; };
+		64A44D132194471F942F0752 /* caros_heavy_italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 71999A57DEF54553BBF07332 /* caros_heavy_italic.woff */; };
+		12F5E56C496F4A7EA9B58B48 /* caros_heavy.woff in Resources */ = {isa = PBXBuildFile; fileRef = A2C6CA1EF9E544C4A448A4A5 /* caros_heavy.woff */; };
+		DDE302B785DB4B96B1110D74 /* caros_italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = D23387E1D1B4448AB596FA62 /* caros_italic.woff */; };
+		ED767783DDD5447C93AA8AE0 /* caros_light_italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = CEC52DBD6F70492BB14F220A /* caros_light_italic.woff */; };
+		234B68D0EDE640DFBBA3B21B /* caros_light.woff in Resources */ = {isa = PBXBuildFile; fileRef = 63CD0A0914ED4726A742A101 /* caros_light.woff */; };
+		F2BE6D6BF11547CDA8E71EA7 /* caros_medium_light.woff in Resources */ = {isa = PBXBuildFile; fileRef = AD8CC1ED2AF54358AC31D496 /* caros_medium_light.woff */; };
+		118E5E63585A4D78B41220DD /* caros_medium.woff in Resources */ = {isa = PBXBuildFile; fileRef = 03896CB0FA2C495FBF93782B /* caros_medium.woff */; };
+		5A8DAC93695D4DDC87A10C21 /* caros_thin_light.woff in Resources */ = {isa = PBXBuildFile; fileRef = 334D6B73BEC946CFA234801F /* caros_thin_light.woff */; };
+		E75373FED3D34D339A35B801 /* caros_thin.woff in Resources */ = {isa = PBXBuildFile; fileRef = A59654C14FF14E1F9B8818DE /* caros_thin.woff */; };
+		E2636816CADC4B46BBE4DE47 /* caros.woff in Resources */ = {isa = PBXBuildFile; fileRef = FEA853C761FF4CF8A1E1ECFC /* caros.woff */; };
+		FDF4F998BB1247F59FACD760 /* caros_black_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EF36ADFC1B14C8E8C3B2C38 /* caros_black_italic.ttf */; };
+		0C963ADA45FE4DF7AA397C67 /* caros_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A0F14005CAC4EC9B45FB6E8 /* caros_black.ttf */; };
+		C9B6A42D8EC146548092AD15 /* caros_bold_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9ACCC507F6214B00A52EC10F /* caros_bold_italic.ttf */; };
+		D5BFC780CA874C8FA19EEEC2 /* caros_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63FCCD0B28F24AE2B7A7E85B /* caros_bold.ttf */; };
+		543B99FF2A40470C8FEF49B4 /* caros_extrabold_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74572BE90AE042C6AA134B7D /* caros_extrabold_italic.ttf */; };
+		B379A5D1F610427CB813E3C5 /* caros_extrabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 459FFDC034BC49968798955C /* caros_extrabold.ttf */; };
+		7983C7AD7D57442D860C0758 /* caros_extralight_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49EBA6B4E01E4032B3736578 /* caros_extralight_italic.ttf */; };
+		413CC35569A9445E8E57434A /* caros_extralight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E6F27A0C31B4EABA1352F9F /* caros_extralight.ttf */; };
+		50A01EF5B20143A9BA53CC60 /* caros_heavy_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14A66AE28F77432B9C308DD5 /* caros_heavy_italic.ttf */; };
+		DDAB12E5EFA54E52ADAF9730 /* caros_heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7332F47D4B4C47C4AC644EE0 /* caros_heavy.ttf */; };
+		E32107ED16954E2BA780AD58 /* caros_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDECEF9DF0E34B12BB8332F7 /* caros_italic.ttf */; };
+		CA7520AB78254997B79DE77B /* caros_light_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F7443DA815E48DA8D948334 /* caros_light_italic.ttf */; };
+		36C746D0846E4047828F4D9C /* caros_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 496104CC146349FC9242B812 /* caros_light.ttf */; };
+		8DA0368D8E4D4937BF234F3B /* caros_medium_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B54D1B13378644D8AEEA1EBD /* caros_medium_light.ttf */; };
+		73B91333841844FF9EA73B8B /* caros_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 166B8557FBF5403B8EF3EB46 /* caros_medium.ttf */; };
+		CE790D8FF29D43E4BA1B5989 /* caros_thin_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B280608FBFE4F82A998E7F9 /* caros_thin_light.ttf */; };
+		6FEBC3394BC548A29883B7CB /* caros_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05FC2962C388487390F894DA /* caros_thin.ttf */; };
+		3C84946D81DD409F97109B29 /* caros.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CBC78537FEF4BFC94B421D5 /* caros.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = st_mobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E356EE1AD99517003FC87E /* st_mobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = st_mobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* st_mobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = st_mobileTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* st_mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = st_mobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = st_mobile/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = st_mobile/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = st_mobile/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = st_mobile/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = st_mobile/main.m; sourceTree = "<group>"; };
+		14F2C069E9A77E724094CD4F /* Pods-st_mobile-st_mobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-st_mobile-st_mobileTests.debug.xcconfig"; path = "Target Support Files/Pods-st_mobile-st_mobileTests/Pods-st_mobile-st_mobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		29A6F3AB49ED1C94C868950F /* Pods-st_mobile-st_mobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-st_mobile-st_mobileTests.release.xcconfig"; path = "Target Support Files/Pods-st_mobile-st_mobileTests/Pods-st_mobile-st_mobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		4A5656184C13E9B4AE94E512 /* Pods-st_mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-st_mobile.debug.xcconfig"; path = "Target Support Files/Pods-st_mobile/Pods-st_mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = st_mobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D7050310454257AE941189D /* libPods-st_mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-st_mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD7EAA2C39FABB3DEA112DA6 /* libPods-st_mobile-st_mobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-st_mobile-st_mobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FB15375C24CCAF688638D3FB /* Pods-st_mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-st_mobile.release.xcconfig"; path = "Target Support Files/Pods-st_mobile/Pods-st_mobile.release.xcconfig"; sourceTree = "<group>"; };
+		434F209636444C6CBE72180A /* caros_black_italic.woff */ = {isa = PBXFileReference; name = "caros_black_italic.woff"; path = "../assets/fonts/caros_black_italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EB17723D4B014B458766DA84 /* caros_black.woff */ = {isa = PBXFileReference; name = "caros_black.woff"; path = "../assets/fonts/caros_black.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D65AD8839E824A47B1EDDFAA /* caros_bold_italic.woff */ = {isa = PBXFileReference; name = "caros_bold_italic.woff"; path = "../assets/fonts/caros_bold_italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A424BE3D926543BFAC04E439 /* caros_bold.woff */ = {isa = PBXFileReference; name = "caros_bold.woff"; path = "../assets/fonts/caros_bold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A6DA5E32491940EB89D0782F /* caros_extrabold_italic.woff */ = {isa = PBXFileReference; name = "caros_extrabold_italic.woff"; path = "../assets/fonts/caros_extrabold_italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		155C291BACBF40679DED82E3 /* caros_extrabold.woff */ = {isa = PBXFileReference; name = "caros_extrabold.woff"; path = "../assets/fonts/caros_extrabold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B79A081494704845A1B69793 /* caros_extralight_italic.woff */ = {isa = PBXFileReference; name = "caros_extralight_italic.woff"; path = "../assets/fonts/caros_extralight_italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2540FBA6580C47F7812AB413 /* caros_extralight.woff */ = {isa = PBXFileReference; name = "caros_extralight.woff"; path = "../assets/fonts/caros_extralight.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		71999A57DEF54553BBF07332 /* caros_heavy_italic.woff */ = {isa = PBXFileReference; name = "caros_heavy_italic.woff"; path = "../assets/fonts/caros_heavy_italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A2C6CA1EF9E544C4A448A4A5 /* caros_heavy.woff */ = {isa = PBXFileReference; name = "caros_heavy.woff"; path = "../assets/fonts/caros_heavy.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D23387E1D1B4448AB596FA62 /* caros_italic.woff */ = {isa = PBXFileReference; name = "caros_italic.woff"; path = "../assets/fonts/caros_italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CEC52DBD6F70492BB14F220A /* caros_light_italic.woff */ = {isa = PBXFileReference; name = "caros_light_italic.woff"; path = "../assets/fonts/caros_light_italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		63CD0A0914ED4726A742A101 /* caros_light.woff */ = {isa = PBXFileReference; name = "caros_light.woff"; path = "../assets/fonts/caros_light.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AD8CC1ED2AF54358AC31D496 /* caros_medium_light.woff */ = {isa = PBXFileReference; name = "caros_medium_light.woff"; path = "../assets/fonts/caros_medium_light.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		03896CB0FA2C495FBF93782B /* caros_medium.woff */ = {isa = PBXFileReference; name = "caros_medium.woff"; path = "../assets/fonts/caros_medium.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		334D6B73BEC946CFA234801F /* caros_thin_light.woff */ = {isa = PBXFileReference; name = "caros_thin_light.woff"; path = "../assets/fonts/caros_thin_light.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A59654C14FF14E1F9B8818DE /* caros_thin.woff */ = {isa = PBXFileReference; name = "caros_thin.woff"; path = "../assets/fonts/caros_thin.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FEA853C761FF4CF8A1E1ECFC /* caros.woff */ = {isa = PBXFileReference; name = "caros.woff"; path = "../assets/fonts/caros.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2EF36ADFC1B14C8E8C3B2C38 /* caros_black_italic.ttf */ = {isa = PBXFileReference; name = "caros_black_italic.ttf"; path = "../assets/fonts/caros_black_italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7A0F14005CAC4EC9B45FB6E8 /* caros_black.ttf */ = {isa = PBXFileReference; name = "caros_black.ttf"; path = "../assets/fonts/caros_black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9ACCC507F6214B00A52EC10F /* caros_bold_italic.ttf */ = {isa = PBXFileReference; name = "caros_bold_italic.ttf"; path = "../assets/fonts/caros_bold_italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		63FCCD0B28F24AE2B7A7E85B /* caros_bold.ttf */ = {isa = PBXFileReference; name = "caros_bold.ttf"; path = "../assets/fonts/caros_bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		74572BE90AE042C6AA134B7D /* caros_extrabold_italic.ttf */ = {isa = PBXFileReference; name = "caros_extrabold_italic.ttf"; path = "../assets/fonts/caros_extrabold_italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		459FFDC034BC49968798955C /* caros_extrabold.ttf */ = {isa = PBXFileReference; name = "caros_extrabold.ttf"; path = "../assets/fonts/caros_extrabold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		49EBA6B4E01E4032B3736578 /* caros_extralight_italic.ttf */ = {isa = PBXFileReference; name = "caros_extralight_italic.ttf"; path = "../assets/fonts/caros_extralight_italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6E6F27A0C31B4EABA1352F9F /* caros_extralight.ttf */ = {isa = PBXFileReference; name = "caros_extralight.ttf"; path = "../assets/fonts/caros_extralight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		14A66AE28F77432B9C308DD5 /* caros_heavy_italic.ttf */ = {isa = PBXFileReference; name = "caros_heavy_italic.ttf"; path = "../assets/fonts/caros_heavy_italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7332F47D4B4C47C4AC644EE0 /* caros_heavy.ttf */ = {isa = PBXFileReference; name = "caros_heavy.ttf"; path = "../assets/fonts/caros_heavy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CDECEF9DF0E34B12BB8332F7 /* caros_italic.ttf */ = {isa = PBXFileReference; name = "caros_italic.ttf"; path = "../assets/fonts/caros_italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0F7443DA815E48DA8D948334 /* caros_light_italic.ttf */ = {isa = PBXFileReference; name = "caros_light_italic.ttf"; path = "../assets/fonts/caros_light_italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		496104CC146349FC9242B812 /* caros_light.ttf */ = {isa = PBXFileReference; name = "caros_light.ttf"; path = "../assets/fonts/caros_light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B54D1B13378644D8AEEA1EBD /* caros_medium_light.ttf */ = {isa = PBXFileReference; name = "caros_medium_light.ttf"; path = "../assets/fonts/caros_medium_light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		166B8557FBF5403B8EF3EB46 /* caros_medium.ttf */ = {isa = PBXFileReference; name = "caros_medium.ttf"; path = "../assets/fonts/caros_medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2B280608FBFE4F82A998E7F9 /* caros_thin_light.ttf */ = {isa = PBXFileReference; name = "caros_thin_light.ttf"; path = "../assets/fonts/caros_thin_light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		05FC2962C388487390F894DA /* caros_thin.ttf */ = {isa = PBXFileReference; name = "caros_thin.ttf"; path = "../assets/fonts/caros_thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2CBC78537FEF4BFC94B421D5 /* caros.ttf */ = {isa = PBXFileReference; name = "caros.ttf"; path = "../assets/fonts/caros.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8856EF234B008A6CF195BB8 /* libPods-st_mobile-st_mobileTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC5E703B777BE91E8C2B9878 /* libPods-st_mobile.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* st_mobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* st_mobileTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = st_mobileTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* st_mobile */ = {
+			isa = PBXGroup;
+			children = (
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				13B07FB71A68108700A75B9A /* main.m */,
+			);
+			name = st_mobile;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				8D7050310454257AE941189D /* libPods-st_mobile.a */,
+				BD7EAA2C39FABB3DEA112DA6 /* libPods-st_mobile-st_mobileTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* st_mobile */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* st_mobileTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				E831FC0188EEA1C057F08F28 /* Pods */,
+				EDF29976C14E4EF8991FE522 /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* st_mobile.app */,
+				00E356EE1AD99517003FC87E /* st_mobileTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E831FC0188EEA1C057F08F28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A5656184C13E9B4AE94E512 /* Pods-st_mobile.debug.xcconfig */,
+				FB15375C24CCAF688638D3FB /* Pods-st_mobile.release.xcconfig */,
+				14F2C069E9A77E724094CD4F /* Pods-st_mobile-st_mobileTests.debug.xcconfig */,
+				29A6F3AB49ED1C94C868950F /* Pods-st_mobile-st_mobileTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EDF29976C14E4EF8991FE522 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				434F209636444C6CBE72180A /* caros_black_italic.woff */,
+				EB17723D4B014B458766DA84 /* caros_black.woff */,
+				D65AD8839E824A47B1EDDFAA /* caros_bold_italic.woff */,
+				A424BE3D926543BFAC04E439 /* caros_bold.woff */,
+				A6DA5E32491940EB89D0782F /* caros_extrabold_italic.woff */,
+				155C291BACBF40679DED82E3 /* caros_extrabold.woff */,
+				B79A081494704845A1B69793 /* caros_extralight_italic.woff */,
+				2540FBA6580C47F7812AB413 /* caros_extralight.woff */,
+				71999A57DEF54553BBF07332 /* caros_heavy_italic.woff */,
+				A2C6CA1EF9E544C4A448A4A5 /* caros_heavy.woff */,
+				D23387E1D1B4448AB596FA62 /* caros_italic.woff */,
+				CEC52DBD6F70492BB14F220A /* caros_light_italic.woff */,
+				63CD0A0914ED4726A742A101 /* caros_light.woff */,
+				AD8CC1ED2AF54358AC31D496 /* caros_medium_light.woff */,
+				03896CB0FA2C495FBF93782B /* caros_medium.woff */,
+				334D6B73BEC946CFA234801F /* caros_thin_light.woff */,
+				A59654C14FF14E1F9B8818DE /* caros_thin.woff */,
+				FEA853C761FF4CF8A1E1ECFC /* caros.woff */,
+				2EF36ADFC1B14C8E8C3B2C38 /* caros_black_italic.ttf */,
+				7A0F14005CAC4EC9B45FB6E8 /* caros_black.ttf */,
+				9ACCC507F6214B00A52EC10F /* caros_bold_italic.ttf */,
+				63FCCD0B28F24AE2B7A7E85B /* caros_bold.ttf */,
+				74572BE90AE042C6AA134B7D /* caros_extrabold_italic.ttf */,
+				459FFDC034BC49968798955C /* caros_extrabold.ttf */,
+				49EBA6B4E01E4032B3736578 /* caros_extralight_italic.ttf */,
+				6E6F27A0C31B4EABA1352F9F /* caros_extralight.ttf */,
+				14A66AE28F77432B9C308DD5 /* caros_heavy_italic.ttf */,
+				7332F47D4B4C47C4AC644EE0 /* caros_heavy.ttf */,
+				CDECEF9DF0E34B12BB8332F7 /* caros_italic.ttf */,
+				0F7443DA815E48DA8D948334 /* caros_light_italic.ttf */,
+				496104CC146349FC9242B812 /* caros_light.ttf */,
+				B54D1B13378644D8AEEA1EBD /* caros_medium_light.ttf */,
+				166B8557FBF5403B8EF3EB46 /* caros_medium.ttf */,
+				2B280608FBFE4F82A998E7F9 /* caros_thin_light.ttf */,
+				05FC2962C388487390F894DA /* caros_thin.ttf */,
+				2CBC78537FEF4BFC94B421D5 /* caros.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* st_mobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "st_mobileTests" */;
+			buildPhases = (
+				D8D531DF41BA1744C26542E2 /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+				941DC0039E77D2B2F53F4697 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = st_mobileTests;
+			productName = st_mobileTests;
+			productReference = 00E356EE1AD99517003FC87E /* st_mobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* st_mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "st_mobile" */;
+			buildPhases = (
+				6CEF184216C3206532C1F974 /* [CP] Check Pods Manifest.lock */,
+				FD10A7F022414F080027D42C /* Start Packager */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				6ECD3A4ABCA1D2BD0417CC9C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = st_mobile;
+			productName = st_mobile;
+			productReference = 13B07F961A680F5B00A75B9A /* st_mobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1120;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "st_mobile" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* st_mobile */,
+				00E356ED1AD99517003FC87E /* st_mobileTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				CA005259DDC740F7B107BCDC /* caros_black_italic.woff in Resources */,
+				F9E3C95FAD354F3C95C77D77 /* caros_black.woff in Resources */,
+				2409209CEA214028828A3DE2 /* caros_bold_italic.woff in Resources */,
+				E78CCA4047F943679564205C /* caros_bold.woff in Resources */,
+				A4D5481B4A5648AD82DB8520 /* caros_extrabold_italic.woff in Resources */,
+				DA086C0AF6204D59877BEDDE /* caros_extrabold.woff in Resources */,
+				6662FFEF40DD4045B57533EA /* caros_extralight_italic.woff in Resources */,
+				9E3ABE990FA24C47B3E1B13A /* caros_extralight.woff in Resources */,
+				64A44D132194471F942F0752 /* caros_heavy_italic.woff in Resources */,
+				12F5E56C496F4A7EA9B58B48 /* caros_heavy.woff in Resources */,
+				DDE302B785DB4B96B1110D74 /* caros_italic.woff in Resources */,
+				ED767783DDD5447C93AA8AE0 /* caros_light_italic.woff in Resources */,
+				234B68D0EDE640DFBBA3B21B /* caros_light.woff in Resources */,
+				F2BE6D6BF11547CDA8E71EA7 /* caros_medium_light.woff in Resources */,
+				118E5E63585A4D78B41220DD /* caros_medium.woff in Resources */,
+				5A8DAC93695D4DDC87A10C21 /* caros_thin_light.woff in Resources */,
+				E75373FED3D34D339A35B801 /* caros_thin.woff in Resources */,
+				E2636816CADC4B46BBE4DE47 /* caros.woff in Resources */,
+				FDF4F998BB1247F59FACD760 /* caros_black_italic.ttf in Resources */,
+				0C963ADA45FE4DF7AA397C67 /* caros_black.ttf in Resources */,
+				C9B6A42D8EC146548092AD15 /* caros_bold_italic.ttf in Resources */,
+				D5BFC780CA874C8FA19EEEC2 /* caros_bold.ttf in Resources */,
+				543B99FF2A40470C8FEF49B4 /* caros_extrabold_italic.ttf in Resources */,
+				B379A5D1F610427CB813E3C5 /* caros_extrabold.ttf in Resources */,
+				7983C7AD7D57442D860C0758 /* caros_extralight_italic.ttf in Resources */,
+				413CC35569A9445E8E57434A /* caros_extralight.ttf in Resources */,
+				50A01EF5B20143A9BA53CC60 /* caros_heavy_italic.ttf in Resources */,
+				DDAB12E5EFA54E52ADAF9730 /* caros_heavy.ttf in Resources */,
+				E32107ED16954E2BA780AD58 /* caros_italic.ttf in Resources */,
+				CA7520AB78254997B79DE77B /* caros_light_italic.ttf in Resources */,
+				36C746D0846E4047828F4D9C /* caros_light.ttf in Resources */,
+				8DA0368D8E4D4937BF234F3B /* caros_medium_light.ttf in Resources */,
+				73B91333841844FF9EA73B8B /* caros_medium.ttf in Resources */,
+				CE790D8FF29D43E4BA1B5989 /* caros_thin_light.ttf in Resources */,
+				6FEBC3394BC548A29883B7CB /* caros_thin.ttf in Resources */,
+				3C84946D81DD409F97109B29 /* caros.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+		};
+		6CEF184216C3206532C1F974 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-st_mobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ECD3A4ABCA1D2BD0417CC9C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-st_mobile/Pods-st_mobile-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-st_mobile/Pods-st_mobile-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-st_mobile/Pods-st_mobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		941DC0039E77D2B2F53F4697 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-st_mobile-st_mobileTests/Pods-st_mobile-st_mobileTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-st_mobile-st_mobileTests/Pods-st_mobile-st_mobileTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-st_mobile-st_mobileTests/Pods-st_mobile-st_mobileTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8D531DF41BA1744C26542E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-st_mobile-st_mobileTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F022414F080027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* st_mobileTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* st_mobile */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14F2C069E9A77E724094CD4F /* Pods-st_mobile-st_mobileTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = st_mobileTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/st_mobile.app/st_mobile";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29A6F3AB49ED1C94C868950F /* Pods-st_mobile-st_mobileTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = st_mobileTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/st_mobile.app/st_mobile";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A5656184C13E9B4AE94E512 /* Pods-st_mobile.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = st_mobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = st_mobile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB15375C24CCAF688638D3FB /* Pods-st_mobile.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = st_mobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = st_mobile;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "st_mobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "st_mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "st_mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}
