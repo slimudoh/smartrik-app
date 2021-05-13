@@ -17,7 +17,7 @@ const Setup = (props): Node => {
           onPress={() => props.navigation.navigate('IntroOne')}>
           <Text style={styles.setupContainerHeaderText}>
             <Image
-              source={require('../assets/images/back.png')}
+              source={require('../../assets/images/back.png')}
               style={{width: 8, height: 16, marginRight: 50}}
               resizeMode={'cover'}
             />{' '}
@@ -58,6 +58,10 @@ const Setup = (props): Node => {
   );
 };
 
+Setup.navigationOptions = navigationData => {
+  console.log(navigationData);
+};
+
 const styles = StyleSheet.create({
   setupContainer: {
     flex: 1,
@@ -68,7 +72,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   setupContainerHeaderText: {
-    width: '100%',
+    width: 100,
     textAlign: 'left',
     fontStyle: 'normal',
     fontSize: 16,

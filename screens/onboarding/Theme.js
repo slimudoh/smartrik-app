@@ -17,7 +17,7 @@ const Theme = (props): Node => {
           onPress={() => props.navigation.navigate('Setup')}>
           <Text style={styles.setupContainerHeaderText}>
             <Image
-              source={require('../assets/images/back.png')}
+              source={require('../../assets/images/back.png')}
               style={{width: 8, height: 16, marginRight: 50}}
               resizeMode={'cover'}
             />{' '}
@@ -30,7 +30,7 @@ const Theme = (props): Node => {
         <Text style={styles.setupContainerBodyPara}>Dark Mode</Text>
         <View style={styles.setupContainerBodyParaImage}>
           <Image
-            source={require('../assets/images/switch.png')}
+            source={require('../../assets/images/switch.png')}
             resizeMode={'contain'}
             style={{width: 93, height: 150}}
           />
@@ -48,6 +48,10 @@ const Theme = (props): Node => {
   );
 };
 
+Theme.navigationOptions = navigationData => {
+  console.log(navigationData);
+};
+
 const styles = StyleSheet.create({
   setupContainer: {
     flex: 1,
@@ -58,7 +62,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   setupContainerHeaderText: {
-    width: '100%',
+    width: 100,
     textAlign: 'left',
     fontStyle: 'normal',
     fontSize: 16,

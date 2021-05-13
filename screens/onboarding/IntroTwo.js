@@ -10,9 +10,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import Skip from '../components/Skip';
+import Skip from '../../components/Skip';
 
-const IntroOne = (props): Node => {
+const IntroTwo = (props): Node => {
   return (
     <ScrollView contentContainerStyle={styles.introContainer}>
       <View style={styles.sliderContainer}>
@@ -20,14 +20,14 @@ const IntroOne = (props): Node => {
           <Skip {...props} />
           <View style={styles.imageContainerImg}>
             <Image
-              source={require('../assets/images/logo.png')}
+              source={require('../../assets/images/logo.png')}
               style={{width: '100%', height: 26}}
               resizeMode={'center'}
             />
           </View>
           <View style={styles.imageContainerPhone}>
             <Image
-              source={require('../assets/images/slider/one.png')}
+              source={require('../../assets/images/slider/two.png')}
               style={{maxWidth: 341}}
               resizeMode={'contain'}
             />
@@ -35,23 +35,28 @@ const IntroOne = (props): Node => {
         </View>
         <View style={styles.TextContainer}>
           <Text style={styles.TextContainerParagraph}>
-            See how much electricity you are using and the cost in real time
+            Set a limit for your energy consumption for the month & monitor the
+            progress
           </Text>
           <TouchableOpacity
-            onPress={() => props.navigation.navigate('IntroTwo')}>
+            onPress={() => props.navigation.navigate('IntroThree')}>
             <View style={styles.TextContainerBtn}>
               <Text style={styles.TextContainerBtnText}>Next</Text>
             </View>
           </TouchableOpacity>
           <View style={styles.TextContainerDots}>
-            <View style={styles.TextContainerDotsChildSelected}></View>
             <View style={styles.TextContainerDotsChild}></View>
+            <View style={styles.TextContainerDotsChildSelected}></View>
             <View style={styles.TextContainerDotsChild}></View>
           </View>
         </View>
       </View>
     </ScrollView>
   );
+};
+
+IntroTwo.navigationOptions = navigationData => {
+  console.log(navigationData);
 };
 
 const styles = StyleSheet.create({
@@ -65,26 +70,22 @@ const styles = StyleSheet.create({
   imageContainer: {
     width: '100%',
     height: Dimensions.get('window').height - 350,
-    backgroundColor: '#FEEFCD',
+    backgroundColor: '#D7DDF4',
     padding: 16,
     overflow: 'hidden',
   },
   imageContainerSkip: {
     width: '100%',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end',
-  },
-  imageContainerSkipBtn: {
-    width: 40,
   },
   imageContainerSkipText: {
-    width: 40,
+    width: '100%',
     textAlign: 'right',
     fontStyle: 'normal',
     fontSize: 16,
     fontFamily: 'caros_medium',
     lineHeight: 20,
     color: '#252F41',
+    margin: 'auto',
   },
   imageContainerImg: {
     marginTop: 10,
@@ -102,8 +103,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 50,
-    paddingLeft: 16,
-    paddingRight: 16,
+    paddingLeft: 10,
+    paddingRight: 10,
   },
   TextContainerParagraph: {
     maxWidth: 295,
@@ -112,8 +113,8 @@ const styles = StyleSheet.create({
     lineHeight: 25,
     textAlign: 'center',
     color: '#252F41',
+    margin: 'auto',
     fontFamily: 'caros',
-    marginBottom: 70,
   },
   TextContainerBtn: {
     width: 106,
@@ -122,6 +123,7 @@ const styles = StyleSheet.create({
     borderColor: '#1EA2F3',
     borderStyle: 'solid',
     borderRadius: 20,
+    marginTop: 70,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -154,4 +156,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default IntroOne;
+export default IntroTwo;

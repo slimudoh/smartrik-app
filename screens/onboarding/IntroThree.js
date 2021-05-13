@@ -11,7 +11,7 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 
-import Skip from '../components/Skip';
+import Skip from '../../components/Skip';
 
 const IntroThree = (props): Node => {
   return (
@@ -21,14 +21,14 @@ const IntroThree = (props): Node => {
           <Skip {...props} />
           <View style={styles.imageContainerImg}>
             <Image
-              source={require('../assets/images/logo.png')}
+              source={require('../../assets/images/logo.png')}
               style={{width: '100%', height: 26}}
               resizeMode={'center'}
             />
           </View>
           <View style={styles.imageContainerPhone}>
             <Image
-              source={require('../assets/images/slider/three.png')}
+              source={require('../../assets/images/slider/three.png')}
               style={{maxWidth: 341}}
               resizeMode={'contain'}
             />
@@ -61,6 +61,10 @@ const IntroThree = (props): Node => {
       </View>
     </ScrollView>
   );
+};
+
+IntroThree.navigationOptions = navigationData => {
+  console.log(navigationData);
 };
 
 const styles = StyleSheet.create({

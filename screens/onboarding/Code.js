@@ -9,70 +9,75 @@ import {
   Platform,
   TextInput,
   TouchableOpacity,
+  TouchableWithoutFeedback,
   Image,
 } from 'react-native';
 
-const Login = (props): Node => {
+const Code = (props): Node => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'position' : 'padding'}>
-        <View style={styles.authHeader}>
-          <Text style={styles.authHeaderMainText}>Welcome Back</Text>
-          <Text style={styles.authHeaderMainTextPara}>
-            So good to have you back, Login to see what’s happening in your
-            house
+      <View style={styles.authHeader}>
+        <Text style={styles.authHeaderMainText}>Welcome to Smartrik</Text>
+        <Text style={styles.authHeaderMainTextPara}>
+          Sign up to start getting insight about your electricity usage in the
+          house
+        </Text>
+      </View>
+      <View style={styles.authBody}>
+        <Text style={styles.authHeaderMainTextLabel}>
+          Your Smartrik Unique Code
+        </Text>
+        <TextInput style={styles.input} keyboardType="numeric" />
+        {/* <Text style={styles.TextContainerSuccessLog}>
+          Your smartrik code can found on the monitor
           </Text>
-        </View>
-        <View style={styles.authBody}>
-          <TextInput
-            style={styles.input}
-            placeholder="Phone Number"
-            keyboardType="numeric"
-          />
-          <TouchableOpacity
-            style={styles.TextContainerBtnCover}
-            onPress={() => console.log('Dashboard')}>
-            <View style={styles.TextContainerBtn}>
-              <Text style={styles.TextContainerBtnText}>Login</Text>
-            </View>
-          </TouchableOpacity>
-          <View style={styles.TextContainerFinger}>
-            <Text style={styles.TextContainerFingerText}>
-              Login with your Fingerprint
-            </Text>
-            <Image
-              source={require('../assets/images/finger.png')}
-              style={{width: 60, height: 60}}
-              resizeMode={'center'}
-            />
+          <Text style={styles.TextContainerErrorLog}>
+            You have entered a wrong code
+          </Text> */}
+        <TouchableOpacity
+          style={styles.TextContainerBtnCover}
+          onPress={() => props.navigation.navigate('Otp')}>
+          <View style={styles.TextContainerBtn}>
+            <Text style={styles.TextContainerBtnText}>Continue</Text>
           </View>
-          <View style={styles.TextContainerBtnFb}>
-            <Image
-              source={require('../assets/images/fb.png')}
-              style={{position: 'absolute', left: 0}}
-              resizeMode={'center'}
-            />
-            <Text style={styles.TextContainerBtnFbText}>
-              Login with facebook
-            </Text>
-          </View>
-          <View style={styles.TextContainerSignup}>
-            <Text style={styles.TextContainerSignupText}>
-              Don’t have a Smartrik account?
-              <Text style={{color: '#1EA2F3'}}> Sign Up now</Text>
-            </Text>
-          </View>
-        </View>
-      </KeyboardAvoidingView>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.TextContainerSignup}>
+        <Text style={styles.TextContainerSignupText}>
+          Do you have a Smartrik account?
+          <TouchableWithoutFeedback
+            onPress={() => props.navigation.navigate('Login')}>
+            <Text style={{color: '#1EA2F3'}}> Login now</Text>
+          </TouchableWithoutFeedback>
+        </Text>
+      </View>
     </ScrollView>
   );
+};
+
+Code.navigationOptions = navigationData => {
+  console.log(navigationData)
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    position: 'relative',
+  },
+  TextContainerSignup: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    marginBottom: 50,
+  },
+  TextContainerSignupText: {
+    fontStyle: 'normal',
+    fontSize: 14,
+    lineHeight: 17,
+    textAlign: 'center',
+    color: '#252F41',
+    fontFamily: 'caros',
   },
   authHeader: {
     width: '100%',
@@ -101,12 +106,13 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   authBody: {
-    paddingTop: 20,
+    paddingTop: 40,
     paddingLeft: 16,
     paddingRight: 16,
   },
   input: {
     width: '100%',
+    height: 40,
     borderBottomWidth: 0.5,
     borderColor: '#252F41',
     borderStyle: 'solid',
@@ -177,18 +183,30 @@ const styles = StyleSheet.create({
     color: '#1EA2F3',
     fontFamily: 'caros',
   },
-  TextContainerSignup: {
-    width: '100%',
-    marginTop: 50,
-  },
-  TextContainerSignupText: {
+  TextContainerSuccessLog: {
     fontStyle: 'normal',
-    fontSize: 14,
-    lineHeight: 17,
-    textAlign: 'center',
+    fontSize: 12,
+    lineHeight: 15,
+    textAlign: 'left',
+    color: '#1EA2F3',
+    fontFamily: 'caros',
+  },
+  TextContainerErrorLog: {
+    fontStyle: 'normal',
+    fontSize: 12,
+    lineHeight: 15,
+    textAlign: 'left',
+    color: '#FB4E4E',
+    fontFamily: 'caros',
+  },
+  authHeaderMainTextLabel: {
+    fontStyle: 'normal',
+    fontSize: 12,
+    lineHeight: 15,
+    textAlign: 'left',
     color: '#252F41',
     fontFamily: 'caros',
   },
 });
 
-export default Login;
+export default Code;
