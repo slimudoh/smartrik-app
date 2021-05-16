@@ -9,16 +9,16 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 
-const Help = (props): Node => {
+const Terms = (props): Node => {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>This is the help.</Text>
+      <Text>This is the Terms and conditions.</Text>
     </View>
   );
 };
 
-Help.navigationOptions = navigationData => {
+Terms.navigationOptions = navigationData => {
   console.log(navigationData);
 };
 
-export default Help;
+export default Terms;

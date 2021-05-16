@@ -15,7 +15,7 @@ import Skip from '../../components/Skip';
 
 const IntroThree = (props): Node => {
   return (
-    <ScrollView contentContainerStyle={styles.introContainer}>
+    <View style={styles.introContainer}>
       <View style={styles.sliderContainer}>
         <View style={styles.imageContainer}>
           <Skip {...props} />
@@ -59,7 +59,7 @@ const IntroThree = (props): Node => {
           </View>
         </View>
       </View>
-    </ScrollView>
+    </View>
   );
 };
 

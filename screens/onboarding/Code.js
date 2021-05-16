@@ -15,7 +15,7 @@ import {
 
 const Code = (props): Node => {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <View style={styles.container}>
       <View style={styles.authHeader}>
         <Text style={styles.authHeaderMainText}>Welcome to Smartrik</Text>
         <Text style={styles.authHeaderMainTextPara}>
@@ -51,12 +51,12 @@ const Code = (props): Node => {
           </TouchableWithoutFeedback>
         </Text>
       </View>
-    </ScrollView>
+    </View>
   );
 };
 
 Code.navigationOptions = navigationData => {
-  console.log(navigationData)
+  console.log(navigationData);
 };
 
 const styles = StyleSheet.create({

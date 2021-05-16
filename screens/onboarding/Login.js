@@ -15,7 +15,7 @@ import {
 
 const Login = (props): Node => {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <View style={styles.container}>
       <View style={styles.authHeader}>
         <Text style={styles.authHeaderMainText}>Welcome Back</Text>
         <Text style={styles.authHeaderMainTextPara}>
@@ -70,7 +70,7 @@ const Login = (props): Node => {
           </TouchableWithoutFeedback>
         </Text>
       </View>
-    </ScrollView>
+    </View>
   );
 };
 

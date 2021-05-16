@@ -12,13 +12,14 @@ import {
   TouchableWithoutFeedback,
   Image,
   Dimensions,
+  Switch,
 } from 'react-native';
 
 const Signup = (props): Node => {
   const [fingerLogin, setFingerLogin] = useState(false);
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <View style={styles.container}>
       <View style={styles.authHeader}>
         <Text style={styles.authHeaderMainText}>Welcome to Smartrik 👋</Text>
         <Text style={styles.authHeaderMainTextPara}>
@@ -81,7 +82,7 @@ const Signup = (props): Node => {
             </Text>
           </View>
 
-          <TouchableWithoutFeedback
+          {/* <TouchableWithoutFeedback
             onPress={() => setFingerLogin(!fingerLogin)}>
             <View
               style={
@@ -96,7 +97,16 @@ const Signup = (props): Node => {
                     : styles.TextContainerSwitchBtnBallRight
                 }></View>
             </View>
-          </TouchableWithoutFeedback>
+          </TouchableWithoutFeedback> */}
+          <View style={styles.TextContainerSwitchBtn}>
+            <Switch
+              trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
+              thumbColor={fingerLogin ? '#fff' : '#fff'}
+              ios_backgroundColor="#3e3e3e"
+              value={fingerLogin}
+              onValueChange={newValue => setFingerLogin(newValue)}
+            />
+          </View>
         </View>
       </View>
       <View style={styles.TextContainerSignup}>
@@ -108,12 +118,12 @@ const Signup = (props): Node => {
           </TouchableWithoutFeedback>
         </Text>
       </View>
-    </ScrollView>
+    </View>
   );
 };
 
 Signup.navigationOptions = navigationData => {
-  console.log(navigationData)
+  console.log(navigationData);
 };
 
 const styles = StyleSheet.create({
@@ -274,6 +284,12 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     color: '#252F41',
     fontFamily: 'caros',
+  },
+  TextContainerSwitchBtn: {
+    width: 51,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
   },
   TextContainerSwitchBtnLeft: {
     position: 'relative',

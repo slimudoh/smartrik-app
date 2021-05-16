@@ -9,16 +9,16 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 
-const Notification = (props): Node => {
+const Policy = (props): Node => {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>This is the notify.</Text>
+      <Text>This is the Privacy Policy.</Text>
     </View>
   );
 };
 
-Notification.navigationOptions = navigationData => {
+Policy.navigationOptions = navigationData => {
   console.log(navigationData);
 };
 
-export default Notification;
+export default Policy;

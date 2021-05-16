@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:/Users/zedcrest/Documents/projects/Portfolio/smartrik/st_mobile">
+      location = "absolute:">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:st_mobile.xcodeproj">
    </FileRef>
 </Workspace>

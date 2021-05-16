@@ -19,7 +19,7 @@ const Otp = (props): Node => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <View style={styles.container}>
       <View style={styles.authHeader}>
         <Text style={styles.authHeaderMainText}>Welcome to Smartrik</Text>
         <Text style={styles.authHeaderMainTextPara}>
@@ -62,61 +62,9 @@ const Otp = (props): Node => {
           </View>
         </TouchableOpacity>
       </View>
-      <View style={styles.TextContainerKeyboard}>
-        <View style={styles.TextContainerKeyboardBtn}>
-          <Text style={styles.TextContainerKeyboardBtnText}>1</Text>
-        </View>
 
-        <View style={styles.TextContainerKeyboardBtn}>
-          <Text style={styles.TextContainerKeyboardBtnText}>2</Text>
-        </View>
-
-        <View style={styles.TextContainerKeyboardBtn}>
-          <Text style={styles.TextContainerKeyboardBtnText}>3</Text>
-        </View>
-
-        <View style={styles.TextContainerKeyboardBtn}>
-          <Text style={styles.TextContainerKeyboardBtnText}>4</Text>
-        </View>
-
-        <View style={styles.TextContainerKeyboardBtn}>
-          <Text style={styles.TextContainerKeyboardBtnText}>5</Text>
-        </View>
-
-        <View style={styles.TextContainerKeyboardBtn}>
-          <Text style={styles.TextContainerKeyboardBtnText}>6</Text>
-        </View>
-
-        <View style={styles.TextContainerKeyboardBtn}>
-          <Text style={styles.TextContainerKeyboardBtnText}>7</Text>
-        </View>
-
-        <View style={styles.TextContainerKeyboardBtn}>
-          <Text style={styles.TextContainerKeyboardBtnText}>8</Text>
-        </View>
-
-        <View style={styles.TextContainerKeyboardBtn}>
-          <Text style={styles.TextContainerKeyboardBtnText}>9</Text>
-        </View>
-
-        <View style={styles.TextContainerKeyboardBtn}>
-          <Text style={styles.TextContainerKeyboardBtnText}></Text>
-        </View>
-
-        <View style={styles.TextContainerKeyboardBtn}>
-          <Text style={styles.TextContainerKeyboardBtnText}>0</Text>
-        </View>
-
-        <View style={styles.TextContainerKeyboardBtn}>
-          <Image
-            source={require('../../assets/images/key.png')}
-            style={{width: 30}}
-            resizeMode={'contain'}
-          />
-        </View>
-      </View>
       <Signup showModal={modalVisible} navigation={props.navigation} />
-    </ScrollView>
+    </View>
   );
 };
 
@@ -130,48 +78,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     position: 'relative',
   },
-  TextContainerKeyboard: {
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    backgroundColor: '#E5F5FF',
-    borderTopRightRadius: 20,
-    borderTopLeftRadius: 20,
-    paddingTop: 10,
-    paddingBottom: 10,
-    paddingLeft: 20,
-    paddingRight: 20,
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  TextContainerKeyboardBtn: {
-    width: '30%',
-    height: 50,
-    maxWidth: 83,
-    backgroundColor: '#fff',
-    borderRadius: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.18,
-    shadowRadius: 1.0,
 
-    elevation: 1,
-    marginBottom: 15,
-  },
-  TextContainerKeyboardBtnText: {
-    fontStyle: 'normal',
-    fontSize: 18,
-    lineHeight: 22,
-    color: '#252F41',
-    fontFamily: 'caros_bold',
-  },
   authHeader: {
     width: '100%',
     backgroundColor: '#1EA2F3',
