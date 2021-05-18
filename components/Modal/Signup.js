@@ -2,14 +2,14 @@ import React, {useEffect, useState} from 'react';
 import type {Node} from 'react';
 import {Text, StyleSheet, View, TouchableOpacity, Modal} from 'react-native';
 
-const Popup = (props): Node => {
+const Signup = (props): Node => {
   const [modalVisible, setModalVisible] = useState(false);
   useEffect(() => {
     setModalVisible(props.showModal);
   }, [props.showModal]);
 
-  const closeModal = () => {
-    setModalVisible(false);
+  const closeModalFromParent = () => {
+    props.onpress();
     props.navigation.navigate('Dashboard');
   };
 
@@ -35,7 +35,7 @@ const Popup = (props): Node => {
             onPress={() => props.navigation.navigate('Dashboard')}> */}
           <TouchableOpacity
             style={styles.TextContainerBtnCover}
-            onPress={closeModal}>
+            onPress={closeModalFromParent}>
             <View style={styles.TextContainerBtn}>
               <Text style={styles.TextContainerBtnText}>Let’s Go</Text>
             </View>
@@ -109,4 +109,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Popup;
+export default Signup;

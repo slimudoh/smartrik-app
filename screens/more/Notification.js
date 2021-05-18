@@ -68,7 +68,7 @@ const Notification = (props): Node => {
             <View style={styles.TextContainerSwitchBtn}>
               <Switch
                 trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
-                thumbColor={devicePush ? '#fff' : '#fff'}
+                thumbColor={'#fff'}
                 ios_backgroundColor="#3e3e3e"
                 value={devicePush}
                 onValueChange={newValue => setDevicePush(newValue)}
@@ -102,7 +102,7 @@ const Notification = (props): Node => {
             <View style={styles.TextContainerSwitchBtn}>
               <Switch
                 trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
-                thumbColor={deviceEmail ? '#fff' : '#fff'}
+                thumbColor={'#fff'}
                 ios_backgroundColor="#3e3e3e"
                 value={deviceEmail}
                 onValueChange={newValue => setDeviceEmail(newValue)}
@@ -142,7 +142,7 @@ const Notification = (props): Node => {
             <View style={styles.TextContainerSwitchBtn}>
               <Switch
                 trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
-                thumbColor={monitorPush ? '#fff' : '#fff'}
+                thumbColor={'#fff'}
                 ios_backgroundColor="#3e3e3e"
                 value={monitorPush}
                 onValueChange={newValue => setMonitorPush(newValue)}
@@ -176,7 +176,7 @@ const Notification = (props): Node => {
             <View style={styles.TextContainerSwitchBtn}>
               <Switch
                 trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
-                thumbColor={monitorEmail ? '#fff' : '#fff'}
+                thumbColor={'#fff'}
                 ios_backgroundColor="#3e3e3e"
                 value={monitorEmail}
                 onValueChange={newValue => setMonitorEmail(newValue)}
@@ -211,7 +211,7 @@ const Notification = (props): Node => {
             <View style={styles.TextContainerSwitchBtn}>
               <Switch
                 trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
-                thumbColor={monthly ? '#fff' : '#fff'}
+                thumbColor={'#fff'}
                 ios_backgroundColor="#3e3e3e"
                 value={monthly}
                 onValueChange={newValue => setMonthly(newValue)}

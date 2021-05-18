@@ -101,7 +101,7 @@ const Signup = (props): Node => {
           <View style={styles.TextContainerSwitchBtn}>
             <Switch
               trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
-              thumbColor={fingerLogin ? '#fff' : '#fff'}
+              thumbColor={'#fff'}
               ios_backgroundColor="#3e3e3e"
               value={fingerLogin}
               onValueChange={newValue => setFingerLogin(newValue)}

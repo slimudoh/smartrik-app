@@ -23,6 +23,10 @@ import Theme from './screens/onboarding/Theme';
 import Home from './screens/home/Home';
 
 import Device from './screens/devices/Device';
+import DeviceDetails from './screens/devices/DeviceDetails';
+import DeviceStats from './screens/devices/DeviceStats';
+import DeviceNotify from './screens/devices/DeviceNotify';
+import NewDevice from './screens/devices/NewDevice';
 
 import Trend from './screens/trends/Trend';
 
@@ -89,6 +93,18 @@ const MoreScreens: () => Node = () => {
   );
 };
 
+const DeviceScreens: () => Node = () => {
+  return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Device" component={Device} />
+      <Stack.Screen name="DeviceDetails" component={DeviceDetails} />
+      <Stack.Screen name="DeviceStats" component={DeviceStats} />
+      <Stack.Screen name="DeviceNotify" component={DeviceNotify} />
+      <Stack.Screen name="NewDevice" component={NewDevice} />
+    </Stack.Navigator>
+  );
+};
+
 const DashboardTab: () => Node = () => {
   return (
     <Tab.Navigator
@@ -117,7 +133,7 @@ const DashboardTab: () => Node = () => {
       />
       <Tab.Screen
         name="Device"
-        component={Device}
+        component={DeviceScreens}
         options={{
           tabBarIcon: tabInfo => {
             return <FontAwesome name="plug" size={20} color={tabInfo.color} />;

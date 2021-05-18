@@ -18,6 +18,10 @@ import Signup from '../../components/Modal/Signup';
 const Otp = (props): Node => {
   const [modalVisible, setModalVisible] = useState(false);
 
+  const closeModal = () => {
+    setModalVisible(false);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.authHeader}>
@@ -63,7 +67,11 @@ const Otp = (props): Node => {
         </TouchableOpacity>
       </View>
 
-      <Signup showModal={modalVisible} navigation={props.navigation} />
+      <Signup
+        showModal={modalVisible}
+        onpress={closeModal}
+        navigation={props.navigation}
+      />
     </View>
   );
 };
