@@ -28,7 +28,7 @@ const IntroTwo = (props): Node => {
           <View style={styles.imageContainerPhone}>
             <Image
               source={require('../../assets/images/slider/two.png')}
-              style={{maxWidth: 341}}
+              style={{height: 400}}
               resizeMode={'contain'}
             />
           </View>
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
   imageContainerPhone: {
     marginTop: 20,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     overflow: 'hidden',
   },

@@ -11,6 +11,7 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   Image,
+  Dimensions,
 } from 'react-native';
 
 import Signup from '../../components/Modal/Signup';
@@ -25,10 +26,10 @@ const Otp = (props): Node => {
   return (
     <View style={styles.container}>
       <View style={styles.authHeader}>
-        <Text style={styles.authHeaderMainText}>Welcome to Smartrik</Text>
+        <Text style={styles.authHeaderMainText}>Verify your contacts</Text>
         <Text style={styles.authHeaderMainTextPara}>
-          Sign up to start getting insight about your electricity usage in the
-          house
+          We just sent a code to your phone number +2348102126964 and Email
+          tifeblakez1@gmail.com
         </Text>
       </View>
       <View style={styles.authBody}>
@@ -114,7 +115,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   authBody: {
-    paddingTop: 40,
+    paddingTop: Dimensions.get('window').height > 800 ? 56 : 50,
     paddingLeft: 16,
     paddingRight: 16,
   },
@@ -141,6 +142,7 @@ const styles = StyleSheet.create({
   },
   TextContainerBtnCover: {
     width: '100%',
+    marginTop: 50,
   },
   TextContainerBtn: {
     width: '100%',
@@ -150,7 +152,7 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     backgroundColor: '#1EA2F3',
     borderRadius: 20,
-    marginTop: 20,
+    // marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -217,8 +219,8 @@ const styles = StyleSheet.create({
   },
   authHeaderMainTextLabel: {
     fontStyle: 'normal',
-    fontSize: 12,
-    lineHeight: 15,
+    fontSize: 14,
+    lineHeight: 17,
     textAlign: 'left',
     color: '#252F41',
     fontFamily: 'caros',

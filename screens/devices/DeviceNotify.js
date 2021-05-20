@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     backgroundColor: '#1EA2F3',
     borderRadius: 20,
-    marginTop: 20,
+    // marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },

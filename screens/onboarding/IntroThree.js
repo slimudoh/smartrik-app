@@ -29,7 +29,7 @@ const IntroThree = (props): Node => {
           <View style={styles.imageContainerPhone}>
             <Image
               source={require('../../assets/images/slider/three.png')}
-              style={{maxWidth: 341}}
+              style={{height: 400}}
               resizeMode={'contain'}
             />
           </View>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
   imageContainerPhone: {
     marginTop: 20,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     overflow: 'hidden',
   },
@@ -132,12 +132,12 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     backgroundColor: '#1EA2F3',
     borderRadius: 20,
-    marginTop: 40,
     alignItems: 'center',
     justifyContent: 'center',
   },
   TextContainerBtnCover: {
     width: '100%',
+    marginTop: 40,
   },
   TextContainerSignin: {
     marginTop: 20,

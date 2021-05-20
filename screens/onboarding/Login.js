@@ -1,19 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import type {Node} from 'react';
 import {
   Text,
   View,
   StyleSheet,
-  ScrollView,
-  KeyboardAvoidingView,
-  Platform,
   TextInput,
   TouchableOpacity,
   TouchableWithoutFeedback,
   Image,
+  Dimensions,
 } from 'react-native';
 
+import FloatLabel from '../../components/FloatLabel';
+
 const Login = (props): Node => {
+  const [inputValue, setInputValue] = useState(null);
+
+  const handleInputTextChange = val => {
+    setInputValue(val);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.authHeader}>
@@ -23,11 +29,11 @@ const Login = (props): Node => {
         </Text>
       </View>
       <View style={styles.authBody}>
-        <TextInput
-          style={styles.input}
-          placeholder="Phone Number"
-          placeholderTextColor="#252F41"
-          keyboardType="numeric"
+        <FloatLabel
+          label="Phone Number"
+          value={inputValue}
+          onchange={handleInputTextChange}
+          keyboardType={'numeric'}
         />
         {/* <Text style={styles.TextContainerSuccessLog}>
             Your smartrik code can found on the monitor
@@ -47,28 +53,29 @@ const Login = (props): Node => {
             Login with your Fingerprint
           </Text>
           <Image
-            source={require('../../assets/images/finger.png')}
+            source={require('../../assets/images/auth/finger.png')}
             style={{width: 60, height: 60}}
             resizeMode={'center'}
           />
         </View>
         <View style={styles.TextContainerBtnFb}>
           <Image
-            source={require('../../assets/images/fb.png')}
+            source={require('../../assets/images/auth/fb.png')}
             style={{position: 'absolute', left: 0, height: 30}}
             resizeMode={'center'}
           />
           <Text style={styles.TextContainerBtnFbText}>Login with facebook</Text>
         </View>
-      </View>
-      <View style={styles.TextContainerSignup}>
-        <Text style={styles.TextContainerSignupText}>
-          Don’t have a Smartrik account?
-          <TouchableWithoutFeedback
-            onPress={() => props.navigation.navigate('Signup')}>
-            <Text style={{color: '#1EA2F3'}}> Sign Up now</Text>
-          </TouchableWithoutFeedback>
-        </Text>
+
+        <View style={styles.TextContainerSignup}>
+          <Text style={styles.TextContainerSignupText}>
+            Don’t have a Smartrik account?
+            <TouchableWithoutFeedback
+              onPress={() => props.navigation.navigate('Signup')}>
+              <Text style={{color: '#1EA2F3'}}> Sign Up now</Text>
+            </TouchableWithoutFeedback>
+          </Text>
+        </View>
       </View>
     </View>
   );
@@ -82,13 +89,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    position: 'relative',
   },
   TextContainerSignup: {
-    position: 'absolute',
-    bottom: 0,
     width: '100%',
-    marginBottom: 50,
+    marginTop: Dimensions.get('window').height > 800 ? 64 : 40,
   },
   TextContainerSignupText: {
     fontStyle: 'normal',
@@ -125,7 +129,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   authBody: {
-    paddingTop: 40,
+    paddingTop: Dimensions.get('window').height > 800 ? 117 : 20,
     paddingLeft: 16,
     paddingRight: 16,
   },
@@ -144,6 +148,7 @@ const styles = StyleSheet.create({
   },
   TextContainerBtnCover: {
     width: '100%',
+    marginTop: 20,
   },
   TextContainerBtn: {
     width: '100%',
@@ -153,7 +158,7 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     backgroundColor: '#1EA2F3',
     borderRadius: 20,
-    marginTop: 20,
+    // marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -169,6 +174,7 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: Dimensions.get('window').height > 800 ? 72 : 40,
   },
   TextContainerFingerText: {
     fontStyle: 'normal',
@@ -177,7 +183,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#252F41',
     fontFamily: 'caros',
-    marginTop: 50,
     marginBottom: 20,
   },
   TextContainerBtnFb: {
@@ -188,7 +193,7 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     borderRadius: 20,
     height: 58,
-    marginTop: 30,
+    marginTop: Dimensions.get('window').height > 800 ? 57 : 30,
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',

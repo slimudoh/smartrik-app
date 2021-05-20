@@ -14,111 +14,113 @@ import {
   Dimensions,
   Switch,
 } from 'react-native';
+import FloatLabel from '../../components/FloatLabel';
 
 const Signup = (props): Node => {
   const [fingerLogin, setFingerLogin] = useState(false);
+  const [name, setName] = useState(null);
+  const [phone, setPhone] = useState(null);
+  const [email, setEmail] = useState(null);
+
+  const handleName = val => {
+    setName(val);
+  };
+  const handlePhone = val => {
+    setPhone(val);
+  };
+  const handleEmail = val => {
+    setEmail(val);
+  };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.authHeader}>
-        <Text style={styles.authHeaderMainText}>Welcome to Smartrik 👋</Text>
-        <Text style={styles.authHeaderMainTextPara}>
-          Sign up so you can start getting more insight about your electricity
-          usage
-        </Text>
-      </View>
-      <View style={styles.authBody}>
-        <TextInput
-          style={styles.input}
-          placeholder="Active Phone Number"
-          placeholderTextColor="#252F41"
-          keyboardType="numeric"
-        />
-        {/* <Text style={styles.TextContainerSuccessLog}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={styles.container}>
+      <ScrollView>
+        <View style={styles.authHeader}>
+          <Text style={styles.authHeaderMainText}>Welcome to Smartrik 👋</Text>
+          <Text style={styles.authHeaderMainTextPara}>
+            Sign up so you can start getting more insight about your electricity
+            usage
+          </Text>
+        </View>
+        <View style={styles.authBody}>
+          <FloatLabel
+            label="Your Name"
+            value={name}
+            onchange={handleName}
+            keyboardType={'default'}
+          />
+          {/* <Text style={styles.TextContainerSuccessLog}>
             Your smartrik code can found on the monitor
           </Text>
           <Text style={styles.TextContainerErrorLog}>
             You have entered a wrong code
           </Text> */}
 
-        <TextInput
-          style={styles.input}
-          placeholder="Confirm Phone Number"
-          placeholderTextColor="#252F41"
-          keyboardType="numeric"
-        />
-        {/* <Text style={styles.TextContainerSuccessLog}>
+          <FloatLabel
+            label="Active Phone Number"
+            value={phone}
+            onchange={handlePhone}
+            keyboardType={'numeric'}
+          />
+          {/* <Text style={styles.TextContainerSuccessLog}>
             Your smartrik code can found on the monitor
           </Text>
           <Text style={styles.TextContainerErrorLog}>
             You have entered a wrong code
           </Text> */}
 
-        <TextInput
-          style={styles.input}
-          placeholder="tifeblakez1@gmail.com"
-          placeholderTextColor="#252F41"
-          keyboardType="email-address"
-        />
-        {/* <Text style={styles.TextContainerSuccessLog}>
+          <FloatLabel
+            label="Email Address"
+            value={email}
+            onchange={handleEmail}
+            keyboardType={'email-address'}
+          />
+          {/* <Text style={styles.TextContainerSuccessLog}>
             Your smartrik code can found on the monitor
           </Text>
           <Text style={styles.TextContainerErrorLog}>
             You have entered a wrong code
           </Text> */}
 
-        <TouchableOpacity
-          style={styles.TextContainerBtnCover}
-          onPress={() => props.navigation.navigate('Code')}>
-          <View style={styles.TextContainerBtn}>
-            <Text style={styles.TextContainerBtnText}>Sign Up</Text>
-          </View>
-        </TouchableOpacity>
-
-        <View style={styles.TextContainerSwitch}>
-          <View style={styles.TextContainerSwitchText}>
-            <Text style={styles.TextContainerSwitchTextStyle}>
-              Login with your fingerprint/face recognition
-            </Text>
-          </View>
-
-          {/* <TouchableWithoutFeedback
-            onPress={() => setFingerLogin(!fingerLogin)}>
-            <View
-              style={
-                !fingerLogin
-                  ? styles.TextContainerSwitchBtnLeft
-                  : styles.TextContainerSwitchBtnRight
-              }>
-              <View
-                style={
-                  !fingerLogin
-                    ? styles.TextContainerSwitchBtnBallLeft
-                    : styles.TextContainerSwitchBtnBallRight
-                }></View>
+          <TouchableOpacity
+            style={styles.TextContainerBtnCover}
+            onPress={() => props.navigation.navigate('Code')}>
+            <View style={styles.TextContainerBtn}>
+              <Text style={styles.TextContainerBtnText}>Sign Up</Text>
             </View>
-          </TouchableWithoutFeedback> */}
-          <View style={styles.TextContainerSwitchBtn}>
-            <Switch
-              trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
-              thumbColor={'#fff'}
-              ios_backgroundColor="#3e3e3e"
-              value={fingerLogin}
-              onValueChange={newValue => setFingerLogin(newValue)}
-            />
+          </TouchableOpacity>
+
+          <View style={styles.TextContainerSwitch}>
+            <View style={styles.TextContainerSwitchText}>
+              <Text style={styles.TextContainerSwitchTextStyle}>
+                Login with your fingerprint/face recognition
+              </Text>
+            </View>
+
+            <View style={styles.TextContainerSwitchBtn}>
+              <Switch
+                trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
+                thumbColor={'#fff'}
+                ios_backgroundColor="#3e3e3e"
+                value={fingerLogin}
+                onValueChange={newValue => setFingerLogin(newValue)}
+              />
+            </View>
           </View>
         </View>
-      </View>
-      <View style={styles.TextContainerSignup}>
-        <Text style={styles.TextContainerSignupText}>
-          Do you have a Smartrik account?
-          <TouchableWithoutFeedback
-            onPress={() => props.navigation.navigate('Login')}>
-            <Text style={{color: '#1EA2F3'}}> Login now</Text>
-          </TouchableWithoutFeedback>
-        </Text>
-      </View>
-    </View>
+        <View style={styles.TextContainerSignup}>
+          <Text style={styles.TextContainerSignupText}>
+            Do you have a Smartrik account?
+            <TouchableWithoutFeedback
+              onPress={() => props.navigation.navigate('Login')}>
+              <Text style={{color: '#1EA2F3'}}> Login now</Text>
+            </TouchableWithoutFeedback>
+          </Text>
+        </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -130,13 +132,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    position: 'relative',
   },
   TextContainerSignup: {
-    position: 'absolute',
-    bottom: 0,
     width: '100%',
-    marginBottom: 50,
+    marginTop: Dimensions.get('window').height > 800 ? 133 : 30,
   },
   TextContainerSignupText: {
     fontStyle: 'normal',
@@ -173,7 +172,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   authBody: {
-    paddingTop: 40,
+    paddingTop: Dimensions.get('window').height > 800 ? 117 : 20,
     paddingLeft: 16,
     paddingRight: 16,
   },
@@ -193,6 +192,7 @@ const styles = StyleSheet.create({
   },
   TextContainerBtnCover: {
     width: '100%',
+    marginTop: Dimensions.get('window').height > 800 ? 50 : 20,
   },
   TextContainerBtn: {
     width: '100%',
@@ -202,7 +202,6 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     backgroundColor: '#1EA2F3',
     borderRadius: 20,
-    marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -272,7 +271,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 50,
+    marginTop: Dimensions.get('window').height > 800 ? 58 : 50,
   },
   TextContainerSwitchText: {
     width: Dimensions.get('window').width - 100,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import type {Node} from 'react';
 import {
   Text,
@@ -11,9 +11,18 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   Image,
+  Dimensions,
 } from 'react-native';
 
+import FloatLabel from '../../components/FloatLabel';
+
 const Code = (props): Node => {
+  const [inputValue, setInputValue] = useState(null);
+
+  const handleInputTextChange = val => {
+    setInputValue(val);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.authHeader}>
@@ -24,10 +33,12 @@ const Code = (props): Node => {
         </Text>
       </View>
       <View style={styles.authBody}>
-        <Text style={styles.authHeaderMainTextLabel}>
-          Your Smartrik Unique Code
-        </Text>
-        <TextInput style={styles.input} keyboardType="numeric" />
+        <FloatLabel
+          label="Your Smartrik Unique Code"
+          value={inputValue}
+          onchange={handleInputTextChange}
+          keyboardType={'numeric'}
+        />
         {/* <Text style={styles.TextContainerSuccessLog}>
           Your smartrik code can found on the monitor
           </Text>
@@ -63,13 +74,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    position: 'relative',
+    // position: 'relative',
   },
   TextContainerSignup: {
-    position: 'absolute',
-    bottom: 0,
     width: '100%',
-    marginBottom: 50,
+    marginTop: Dimensions.get('window').height > 800 ? 300 : 100,
   },
   TextContainerSignupText: {
     fontStyle: 'normal',
@@ -106,7 +115,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   authBody: {
-    paddingTop: 40,
+    paddingTop: Dimensions.get('window').height > 800 ? 85 : 40,
     paddingLeft: 16,
     paddingRight: 16,
   },
@@ -125,6 +134,7 @@ const styles = StyleSheet.create({
   },
   TextContainerBtnCover: {
     width: '100%',
+    marginTop: 50,
   },
   TextContainerBtn: {
     width: '100%',
@@ -134,7 +144,6 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     backgroundColor: '#1EA2F3',
     borderRadius: 20,
-    marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -211,6 +211,7 @@ const styles = StyleSheet.create({
 
   TextContainerBtnCover: {
     width: '100%',
+    marginTop: 20,
   },
   TextContainerBtn: {
     width: '100%',
@@ -220,7 +221,6 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     backgroundColor: '#1EA2F3',
     borderRadius: 20,
-    marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
