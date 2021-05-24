@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
     marginBottom: 22,
   },
   containerStatsDetailsKey: {
-    width: 190,
+    width: '60%',
   },
   containerStatsDetailsKeyHead: {
     fontStyle: 'normal',
@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
     fontFamily: 'caros',
   },
   containerStatsDetailsVal: {
-    width: 100,
+    width: '40%',
     fontStyle: 'normal',
     fontSize: 16,
     lineHeight: 20,

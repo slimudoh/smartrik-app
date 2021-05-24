@@ -6,39 +6,43 @@ const FloatLabel = (props): Node => {
   const floatLabelAnimate = useRef(new Animated.Value(31)).current;
   const [isFocused, setIsFocused] = useState(false);
 
-  const inputLabel = {
-    position: 'absolute',
-    left: 4,
-    top: isFocused ? 5 : 31,
-
-    fontSize: isFocused ? 12 : 14,
-    color: '#252F41',
-    fontStyle: 'normal',
-    lineHeight: 17,
-    textAlign: 'left',
-    fontFamily: 'caros',
-  };
-
   const handleFocus = () => {
     Animated.timing(floatLabelAnimate, {
       toValue: isFocused ? 5 : 31,
       duration: 3000,
-      useNativeDriver: false,
+      useNativeDriver: true,
     }).start();
     setIsFocused(true);
   };
+
   const handleBlur = () => {
     if (props.value === null || props.value.trim() === '') {
       Animated.timing(floatLabelAnimate, {
         toValue: isFocused ? 5 : 31,
         duration: 3000,
-        useNativeDriver: false,
+        useNativeDriver: true,
       }).start();
       setIsFocused(false);
     }
   };
   const handleInputContent = text => {
     props.onchange(text);
+  };
+
+  const inputLabel = {
+    position: 'absolute',
+    left: 4,
+    top: isFocused ? 5 : 31,
+    // top: floatLabelAnimate.interpolate({
+    //   inputRange: [0, 1],
+    //   outputRange: [5, 31],
+    // }),
+    fontSize: isFocused ? 12 : 14,
+    color: '#252F41',
+    fontStyle: 'normal',
+    lineHeight: 17,
+    textAlign: 'left',
+    fontFamily: 'caros',
   };
 
   return (

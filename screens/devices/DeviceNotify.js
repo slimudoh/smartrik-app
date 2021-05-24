@@ -46,17 +46,17 @@ const DeviceNotify = (props): Node => {
             <Text style={{color: '#1EA2F3'}}>30Min</Text>
           </Text>
         </View>
-      </ScrollView>
 
-      <View style={styles.TextContainerBtnCoverPosition}>
-        <TouchableOpacity
-          style={styles.TextContainerBtnCover}
-          onPress={() => console.log('save')}>
-          <View style={styles.TextContainerBtn}>
-            <Text style={styles.TextContainerBtnText}>Save</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
+        <View style={styles.TextContainerBtnCoverPosition}>
+          <TouchableOpacity
+            style={styles.TextContainerBtnCover}
+            onPress={() => console.log('save')}>
+            <View style={styles.TextContainerBtn}>
+              <Text style={styles.TextContainerBtnText}>Save</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
     </View>
   );
 };
@@ -70,7 +70,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     paddingTop: 20,
-    position: 'relative',
   },
 
   setupContainerHeader: {
@@ -117,7 +116,7 @@ const styles = StyleSheet.create({
     fontFamily: 'caros',
   },
   containerBody: {
-    paddingTop: 20,
+    paddingTop: Dimensions.get('window').height > 800 ? 71 : 20,
     paddingLeft: 16,
     paddingRight: 16,
     paddingBottom: 100,
@@ -141,7 +140,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 100,
+    marginTop: Dimensions.get('window').height > 800 ? 71 : 100,
   },
   containerNotifyText: {
     maxWidth: 226,
@@ -153,17 +152,14 @@ const styles = StyleSheet.create({
     fontFamily: 'caros',
   },
   TextContainerBtnCoverPosition: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
     width: '100%',
     paddingLeft: 16,
     paddingRight: 16,
     paddingBottom: 50,
+    marginTop: Dimensions.get('window').height > 800 ? 200 : 50,
   },
   TextContainerBtnCover: {
     width: '100%',
-    marginTop: 50,
   },
   TextContainerBtn: {
     width: '100%',

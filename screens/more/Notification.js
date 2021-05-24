@@ -49,22 +49,6 @@ const Notification = (props): Node => {
               </Text>
             </View>
 
-            {/* <TouchableWithoutFeedback
-              onPress={() => setDevicePush(!devicePush)}>
-              <View
-                style={
-                  !devicePush
-                    ? styles.TextContainerSwitchBtnLeft
-                    : styles.TextContainerSwitchBtnRight
-                }>
-                <View
-                  style={
-                    !devicePush
-                      ? styles.TextContainerSwitchBtnBallLeft
-                      : styles.TextContainerSwitchBtnBallRight
-                  }></View>
-              </View>
-            </TouchableWithoutFeedback> */}
             <View style={styles.TextContainerSwitchBtn}>
               <Switch
                 trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
@@ -83,22 +67,6 @@ const Notification = (props): Node => {
               </Text>
             </View>
 
-            {/* <TouchableWithoutFeedback
-              onPress={() => setDeviceEmail(!deviceEmail)}>
-              <View
-                style={
-                  !deviceEmail
-                    ? styles.TextContainerSwitchBtnLeft
-                    : styles.TextContainerSwitchBtnRight
-                }>
-                <View
-                  style={
-                    !deviceEmail
-                      ? styles.TextContainerSwitchBtnBallLeft
-                      : styles.TextContainerSwitchBtnBallRight
-                  }></View>
-              </View>
-            </TouchableWithoutFeedback> */}
             <View style={styles.TextContainerSwitchBtn}>
               <Switch
                 trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
@@ -123,22 +91,6 @@ const Notification = (props): Node => {
               </Text>
             </View>
 
-            {/* <TouchableWithoutFeedback
-              onPress={() => setMonitorPush(!monitorPush)}>
-              <View
-                style={
-                  !monitorPush
-                    ? styles.TextContainerSwitchBtnLeft
-                    : styles.TextContainerSwitchBtnRight
-                }>
-                <View
-                  style={
-                    !monitorPush
-                      ? styles.TextContainerSwitchBtnBallLeft
-                      : styles.TextContainerSwitchBtnBallRight
-                  }></View>
-              </View>
-            </TouchableWithoutFeedback> */}
             <View style={styles.TextContainerSwitchBtn}>
               <Switch
                 trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
@@ -157,22 +109,6 @@ const Notification = (props): Node => {
               </Text>
             </View>
 
-            {/* <TouchableWithoutFeedback
-              onPress={() => setMonitorEmail(!monitorEmail)}>
-              <View
-                style={
-                  !monitorEmail
-                    ? styles.TextContainerSwitchBtnLeft
-                    : styles.TextContainerSwitchBtnRight
-                }>
-                <View
-                  style={
-                    !monitorEmail
-                      ? styles.TextContainerSwitchBtnBallLeft
-                      : styles.TextContainerSwitchBtnBallRight
-                  }></View>
-              </View>
-            </TouchableWithoutFeedback> */}
             <View style={styles.TextContainerSwitchBtn}>
               <Switch
                 trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
@@ -186,28 +122,13 @@ const Notification = (props): Node => {
         </View>
 
         <View style={styles.containerBodyDetailsFull}>
-          <View style={styles.TextContainerSwitch}>
+          <View style={styles.TextContainerSwitchSingle}>
             <View style={styles.TextContainerSwitchText}>
               <Text style={styles.TextContainerSwitchTextStyle}>
                 Send monthly report
               </Text>
             </View>
 
-            {/* <TouchableWithoutFeedback onPress={() => setMonthly(!monthly)}>
-              <View
-                style={
-                  !monthly
-                    ? styles.TextContainerSwitchBtnLeft
-                    : styles.TextContainerSwitchBtnRight
-                }>
-                <View
-                  style={
-                    !monthly
-                      ? styles.TextContainerSwitchBtnBallLeft
-                      : styles.TextContainerSwitchBtnBallRight
-                  }></View>
-              </View>
-            </TouchableWithoutFeedback> */}
             <View style={styles.TextContainerSwitchBtn}>
               <Switch
                 trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
@@ -290,8 +211,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingLeft: 18,
     paddingRight: 18,
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingTop: 23,
+    paddingBottom: 23,
     marginBottom: 15,
   },
 
@@ -315,6 +236,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 20,
+  },
+  TextContainerSwitchSingle: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   TextContainerSwitchText: {
     width: 190,

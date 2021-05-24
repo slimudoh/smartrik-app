@@ -8,6 +8,7 @@ import {
   Image,
   TouchableWithoutFeedback,
 } from 'react-native';
+import Svg, {Path, Circle} from 'react-native-svg';
 
 const MyHome = (props): Node => {
   return (
@@ -41,7 +42,9 @@ const MyHome = (props): Node => {
           </View>
 
           <View style={styles.containerBodyDetailsFullSection}>
-            <Text style={styles.containerBodyDetailsFullSectionKey}>
+            <Text
+              style={styles.containerBodyDetailsFullSectionKey}
+              numberOfLines={1}>
               Serial No.
             </Text>
             <Text style={styles.containerBodyDetailsFullSectionValue}>
@@ -62,7 +65,9 @@ const MyHome = (props): Node => {
             <Text style={styles.containerBodyDetailsFullSectionKey}>
               MAC Address
             </Text>
-            <Text style={styles.containerBodyDetailsFullSectionValue}>
+            <Text
+              style={styles.containerBodyDetailsFullSectionValue}
+              numberOfLines={1}>
               837930893739400493
             </Text>
           </View>
@@ -70,27 +75,74 @@ const MyHome = (props): Node => {
 
         <View style={styles.containerBodyDetailsNav}>
           <Text style={styles.containerBodyDetailsNavText}>Internet</Text>
-          <Text style={styles.containerBodyDetailsNavIcon}>
-            Ethernet{' '}
-            <Image
-              source={require('../../assets/images/more/arrow.png')}
-              style={{flex: 1, height: 28, width: 28}}
-              resizeMode="contain"
-            />
-          </Text>
+          <TouchableWithoutFeedback
+            onPress={() => props.navigation.navigate('Internet')}>
+            <View style={styles.containerBodyDetailsNavIcon}>
+              <Text style={styles.containerBodyDetailsNavIconText}>
+                Ethernet
+              </Text>
+              <View style={styles.containerBodyDetailsNavIconImg}>
+                <Svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <Circle
+                    cx="14"
+                    cy="14"
+                    r="14"
+                    fill="#1EA2F3"
+                    fillOpacity="0.25"
+                  />
+                  <Path
+                    d="M12 10L16 14L12 18"
+                    stroke="#1EA2F3"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </Svg>
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
         </View>
 
         <View style={styles.containerBodyDetailsNav}>
           <Text style={styles.containerBodyDetailsNavText}>
             Electricity Cost
           </Text>
-          <Text style={styles.containerBodyDetailsNavIcon}>
-            ₦62.33/Kwh{' '}
-            <Image
-              source={require('../../assets/images/more/arrow.png')}
-              style={{width: 28, height: 28, resizeMode: 'cover'}}
-            />
-          </Text>
+          <TouchableWithoutFeedback
+            onPress={() => props.navigation.navigate('Cost')}>
+            <View style={styles.containerBodyDetailsNavIcon}>
+              <Text style={styles.containerBodyDetailsNavIconText}>
+                ₦62.33/Kwh
+              </Text>
+              <View style={styles.containerBodyDetailsNavIconImg}>
+                <Svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <Circle
+                    cx="14"
+                    cy="14"
+                    r="14"
+                    fill="#1EA2F3"
+                    fillOpacity="0.25"
+                  />
+                  <Path
+                    d="M12 10L16 14L12 18"
+                    stroke="#1EA2F3"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </Svg>
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
         </View>
 
         <View style={styles.containerBodyDetailsFull}>
@@ -129,7 +181,7 @@ MyHome.navigationOptions = navigationData => {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
     backgroundColor: '#fff',
     paddingTop: 20,
   },
@@ -178,7 +230,7 @@ const styles = StyleSheet.create({
     fontFamily: 'caros',
   },
   containerBody: {
-    paddingTop: 40,
+    paddingTop: 31,
     paddingLeft: 16,
     paddingRight: 16,
     paddingBottom: 100,
@@ -187,9 +239,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(30, 162, 243, 0.05)',
     borderRadius: 10,
     paddingLeft: 18,
-    paddingRight: 10,
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingRight: 18,
+    paddingTop: 22,
+    paddingBottom: 22,
     marginBottom: 15,
   },
 
@@ -199,15 +251,17 @@ const styles = StyleSheet.create({
     fontFamily: 'caros_medium',
     lineHeight: 20,
     color: '#252F41',
+    marginBottom: 5,
   },
   containerBodyDetailsFullSection: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-    marginTop: 30,
+    marginTop: 15,
+    overflow: 'hidden',
   },
   containerBodyDetailsFullSectionKey: {
-    width: 150,
+    width: '40%',
     fontStyle: 'normal',
     fontSize: 16,
     fontFamily: 'caros_medium',
@@ -215,7 +269,7 @@ const styles = StyleSheet.create({
     color: '#787878',
   },
   containerBodyDetailsFullSectionValue: {
-    width: 190,
+    width: '60%',
     fontStyle: 'normal',
     fontSize: 16,
     fontFamily: 'caros_medium',
@@ -227,16 +281,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(30, 162, 243, 0.05)',
     borderRadius: 10,
     paddingLeft: 18,
-    paddingRight: 10,
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingRight: 18,
+    paddingTop: 14,
+    paddingBottom: 14,
     marginBottom: 15,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   containerBodyDetailsNavText: {
-    width: 150,
+    width: '50%',
     fontStyle: 'normal',
     fontSize: 16,
     fontFamily: 'caros_medium',
@@ -244,7 +298,13 @@ const styles = StyleSheet.create({
     color: '#787878',
   },
   containerBodyDetailsNavIcon: {
-    width: 160,
+    width: '50%',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  containerBodyDetailsNavIconText: {
+    width: 120,
     fontStyle: 'normal',
     fontSize: 16,
     fontFamily: 'caros_medium',
@@ -252,8 +312,9 @@ const styles = StyleSheet.create({
     color: '#252F41',
     textAlign: 'right',
     paddingRight: 5,
-    paddingBottom: 5,
-    paddingTop: 5,
+  },
+  containerBodyDetailsNavIconImg: {
+    width: 25,
   },
 });
 

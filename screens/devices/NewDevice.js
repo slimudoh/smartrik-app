@@ -11,14 +11,41 @@ import {
   TouchableWithoutFeedback,
   Switch,
   TextInput,
+  KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 import DeviceOn from '../../components/Modal/DeviceOn';
+import FloatLabel from '../../components/FloatLabel';
 
 const NewDevice = (props): Node => {
   const [modalVisible, setModalVisible] = useState(false);
+  const [connectDevice, setConnectDevice] = useState(false);
+
+  const [name, setName] = useState(null);
+  const [brand, setBrand] = useState(null);
+  const [model, setModel] = useState(null);
+  const [location, setLocation] = useState(null);
 
   const closeModal = () => {
     setModalVisible(false);
+  };
+
+  const handleName = val => {
+    setName(val);
+  };
+  const handleBrand = val => {
+    setBrand(val);
+  };
+  const handleModel = val => {
+    setModel(val);
+  };
+  const handleLocation = val => {
+    setLocation(val);
+  };
+
+  const openModal = () => {
+    setModalVisible(true);
+    setConnectDevice(true);
   };
 
   return (
@@ -41,60 +68,61 @@ const NewDevice = (props): Node => {
           <Text style={styles.containerHeaderTitleText}>New device</Text>
         </View>
       </View>
-      <ScrollView contentContainerStyle={styles.containerBody}>
-        <View style={styles.modalContainerInfo}>
-          <View style={styles.modalContainerInfoInput}>
-            <Text style={styles.containerCardFormLabel}>Device Name</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="Fridge"
-              placeholderTextColor="#252F41"
-              keyboardType="numeric"
-            />
-          </View>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        style={styles.containerBody}>
+        <ScrollView>
+          <View style={styles.modalContainerInfo}>
+            <View style={styles.modalContainerInfoInput}>
+              <FloatLabel
+                label="Device Name"
+                value={name}
+                onchange={handleName}
+                keyboardType={'default'}
+              />
+            </View>
 
-          <View style={styles.modalContainerInfoInput}>
-            <TextInput
-              style={styles.input}
-              placeholder="Brand"
-              placeholderTextColor="#252F41"
-              keyboardType="numeric"
-            />
-          </View>
+            <View style={styles.modalContainerInfoInput}>
+              <FloatLabel
+                label="Brand"
+                value={brand}
+                onchange={handleBrand}
+                keyboardType={'default'}
+              />
+            </View>
 
-          <View style={styles.modalContainerInfoInput}>
-            <TextInput
-              style={styles.input}
-              placeholder="Model"
-              placeholderTextColor="#252F41"
-              keyboardType="numeric"
-            />
-          </View>
+            <View style={styles.modalContainerInfoInput}>
+              <FloatLabel
+                label="Model"
+                value={model}
+                onchange={handleModel}
+                keyboardType={'default'}
+              />
+            </View>
 
-          <View style={styles.modalContainerInfoInput}>
-            <Text style={styles.containerCardFormLabel}>
-              Location of device in the building
-            </Text>
-            <TextInput
-              style={styles.input}
-              placeholder="Kitchen"
-              placeholderTextColor="#252F41"
-              keyboardType="numeric"
-            />
+            <View style={styles.modalContainerInfoInput}>
+              <FloatLabel
+                label="Location of device in the building"
+                value={location}
+                onchange={handleLocation}
+                keyboardType={'default'}
+              />
+            </View>
           </View>
-        </View>
-        <TouchableOpacity
-          style={styles.TextContainerBtnCover}
-          onPress={() => setModalVisible(true)}>
-          <View style={styles.TextContainerBtn}>
-            <Text style={styles.TextContainerBtnText}>Set Up Device</Text>
-          </View>
-        </TouchableOpacity>
-      </ScrollView>
+          <TouchableOpacity
+            style={styles.TextContainerBtnCover}
+            onPress={openModal}>
+            <View style={styles.TextContainerBtn}>
+              <Text style={styles.TextContainerBtnText}>Set Up Device</Text>
+            </View>
+          </TouchableOpacity>
+        </ScrollView>
+      </KeyboardAvoidingView>
       <DeviceOn
         showModal={modalVisible}
         onpress={closeModal}
         navigation={props.navigation}
+        connect={connectDevice}
       />
     </View>
   );
@@ -176,7 +204,6 @@ const styles = StyleSheet.create({
     fontFamily: 'caros',
   },
   containerBody: {
-    paddingTop: 20,
     paddingLeft: 16,
     paddingRight: 16,
     paddingBottom: 100,
@@ -185,7 +212,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   modalContainerInfoInput: {
-    marginBottom: 30,
+    marginBottom: 10,
   },
   containerCardFormLabel: {
     fontStyle: 'normal',
@@ -211,7 +238,7 @@ const styles = StyleSheet.create({
 
   TextContainerBtnCover: {
     width: '100%',
-    marginTop: 20,
+    marginTop: Dimensions.get('window').height > 800 ? 200 : 20,
   },
   TextContainerBtn: {
     width: '100%',

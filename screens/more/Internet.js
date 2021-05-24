@@ -20,7 +20,7 @@ const Internet = (props): Node => {
     <View style={styles.container}>
       <View style={styles.setupContainerHeader}>
         <TouchableWithoutFeedback
-          onPress={() => props.navigation.navigate('More')}>
+          onPress={() => props.navigation.navigate('MyHome')}>
           <Text style={styles.setupContainerHeaderText}>
             <Image
               source={require('../../assets/images/back.png')}
@@ -40,21 +40,6 @@ const Internet = (props): Node => {
             <Text style={styles.TextContainerSwitchTextStyle}>Wifi</Text>
           </View>
 
-          {/* <TouchableWithoutFeedback onPress={() => setWifi(!wifi)}>
-            <View
-              style={
-                !wifi
-                  ? styles.TextContainerSwitchBtnLeft
-                  : styles.TextContainerSwitchBtnRight
-              }>
-              <View
-                style={
-                  !wifi
-                    ? styles.TextContainerSwitchBtnBallLeft
-                    : styles.TextContainerSwitchBtnBallRight
-                }></View>
-            </View>
-          </TouchableWithoutFeedback> */}
           <View style={styles.TextContainerSwitchBtn}>
             <Switch
               trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}
@@ -71,21 +56,6 @@ const Internet = (props): Node => {
             <Text style={styles.TextContainerSwitchTextStyle}>Ethernet</Text>
           </View>
 
-          {/* <TouchableWithoutFeedback onPress={() => setEthernet(!ethernet)}>
-            <View
-              style={
-                !ethernet
-                  ? styles.TextContainerSwitchBtnLeft
-                  : styles.TextContainerSwitchBtnRight
-              }>
-              <View
-                style={
-                  !ethernet
-                    ? styles.TextContainerSwitchBtnBallLeft
-                    : styles.TextContainerSwitchBtnBallRight
-                }></View>
-            </View>
-          </TouchableWithoutFeedback> */}
           <View style={styles.TextContainerSwitchBtn}>
             <Switch
               trackColor={{false: '#BFBFBF', true: '#1EA2F3'}}

@@ -11,8 +11,23 @@ import {
   TouchableWithoutFeedback,
   TextInput,
 } from 'react-native';
+import FloatLabel from '../../components/FloatLabel';
 
 const AddCard = (props): Node => {
+  const [cardNumber, setCardNumber] = useState(null);
+  const [cardExpiry, setCardExpiry] = useState(null);
+  const [cardCvv, setCardCvv] = useState(null);
+
+  const handleCardNumber = val => {
+    setCardNumber(val);
+  };
+  const handleCardExpiry = val => {
+    setCardExpiry(val);
+  };
+  const handleCardCvv = val => {
+    setCardCvv(val);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.setupContainerHeader}>
@@ -34,31 +49,28 @@ const AddCard = (props): Node => {
       <ScrollView contentContainerStyle={styles.containerBody}>
         <View style={styles.containerCardForm}>
           <View style={styles.containerCardFormSingle}>
-            <Text style={styles.containerCardFormLabel}>Card Number</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="1234 1234 1234 1234"
-              placeholderTextColor="#252F41"
-              keyboardType="numeric"
+            <FloatLabel
+              label="Card Number"
+              value={cardNumber}
+              onchange={handleCardNumber}
+              keyboardType={'numeric'}
             />
           </View>
           <View style={styles.containerCardFormDouble}>
             <View style={styles.containerCardFormDoubleInput}>
-              <Text style={styles.containerCardFormLabel}>Expiry</Text>
-              <TextInput
-                style={styles.input}
-                placeholder="9/23"
-                placeholderTextColor="#252F41"
-                keyboardType="numeric"
+              <FloatLabel
+                label="Expiry"
+                value={cardExpiry}
+                onchange={handleCardExpiry}
+                keyboardType={'numeric'}
               />
             </View>
             <View style={styles.containerCardFormDoubleInput}>
-              <Text style={styles.containerCardFormLabel}>CVV</Text>
-              <TextInput
-                style={styles.input}
-                placeholder="432"
-                placeholderTextColor="#252F41"
-                keyboardType="numeric"
+              <FloatLabel
+                label="CVV"
+                value={cardCvv}
+                onchange={handleCardCvv}
+                keyboardType={'numeric'}
               />
             </View>
           </View>
@@ -141,7 +153,7 @@ const styles = StyleSheet.create({
     fontFamily: 'caros',
   },
   containerBody: {
-    paddingTop: 20,
+    paddingTop: 31,
     paddingLeft: 16,
     paddingRight: 16,
     paddingBottom: 100,
@@ -155,7 +167,7 @@ const styles = StyleSheet.create({
     fontFamily: 'caros',
   },
   containerCardFormSingle: {
-    marginBottom: 30,
+    marginBottom: 10,
   },
   containerCardFormDouble: {
     flexDirection: 'row',
@@ -198,7 +210,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 40,
+    marginTop: Dimensions.get('window').height > 800 ? 76 : 40,
   },
   containerCardChargeText: {
     maxWidth: 280,
@@ -212,7 +224,7 @@ const styles = StyleSheet.create({
   },
   TextContainerBtnCover: {
     width: '100%',
-    marginTop: 20,
+    marginTop: 27,
   },
   TextContainerBtn: {
     width: '100%',

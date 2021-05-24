@@ -10,6 +10,7 @@ import {
   Dimensions,
   TouchableWithoutFeedback,
 } from 'react-native';
+import Svg, {Path, Circle} from 'react-native-svg';
 
 const Help = (props): Node => {
   return (
@@ -39,10 +40,27 @@ const Help = (props): Node => {
           </View>
           <TouchableWithoutFeedback onPress={() => console.log('hello')}>
             <View style={styles.containerBodySectionArrow}>
-              <Image
-                source={require('../../assets/images/more/arrow.png')}
-                style={{width: 28, height: 28}}
-              />
+              <Svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <Circle
+                  cx="14"
+                  cy="14"
+                  r="14"
+                  fill="#1EA2F3"
+                  fillOpacity="0.25"
+                />
+                <Path
+                  d="M12 10L16 14L12 18"
+                  stroke="#1EA2F3"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </Svg>
             </View>
           </TouchableWithoutFeedback>
         </View>
@@ -54,10 +72,27 @@ const Help = (props): Node => {
           </View>
           <TouchableWithoutFeedback onPress={() => console.log('hello')}>
             <View style={styles.containerBodySectionArrow}>
-              <Image
-                source={require('../../assets/images/more/arrow.png')}
-                style={{width: 28, height: 28}}
-              />
+              <Svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <Circle
+                  cx="14"
+                  cy="14"
+                  r="14"
+                  fill="#1EA2F3"
+                  fillOpacity="0.25"
+                />
+                <Path
+                  d="M12 10L16 14L12 18"
+                  stroke="#1EA2F3"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </Svg>
             </View>
           </TouchableWithoutFeedback>
         </View>
@@ -69,10 +104,27 @@ const Help = (props): Node => {
           </View>
           <TouchableWithoutFeedback onPress={() => console.log('hello')}>
             <View style={styles.containerBodySectionArrow}>
-              <Image
-                source={require('../../assets/images/more/arrow.png')}
-                style={{width: 28, height: 28}}
-              />
+              <Svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <Circle
+                  cx="14"
+                  cy="14"
+                  r="14"
+                  fill="#1EA2F3"
+                  fillOpacity="0.25"
+                />
+                <Path
+                  d="M12 10L16 14L12 18"
+                  stroke="#1EA2F3"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </Svg>
             </View>
           </TouchableWithoutFeedback>
         </View>
