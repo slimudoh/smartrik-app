@@ -11,7 +11,27 @@ import {
   Animated,
   Easing,
 } from 'react-native';
-import Svg, {Path, Circle} from 'react-native-svg';
+import Svg, {
+  Circle,
+  Ellipse,
+  G,
+  TSpan,
+  TextPath,
+  Path,
+  Polygon,
+  Polyline,
+  Line,
+  Rect,
+  Use,
+  Symbol,
+  Defs,
+  LinearGradient,
+  RadialGradient,
+  Stop,
+  ClipPath,
+  Pattern,
+  Mask,
+} from 'react-native-svg';
 
 const DeviceOn = (props): Node => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -212,7 +232,7 @@ const DeviceOn = (props): Node => {
               {deviceStatus === 'connected' ? (
                 <View style={styles.modalContainerRollerImage}>
                   <Animated.Image
-                    source={require('../../assets/images/devices/roller.png')}
+                    source={require('../../assets/images/roller.png')}
                     style={{
                       width: 142,
                       height: 142,
@@ -220,17 +240,89 @@ const DeviceOn = (props): Node => {
                     }}
                   />
                   <View style={styles.modalContainerRollerSwitch}>
-                    <Image
-                      source={require('../../assets/images/devices/switchon.png')}
-                      style={{width: 54, height: 103}}
-                    />
+                    <Svg
+                      width={54}
+                      height={103}
+                      viewBox="0 0 82 132"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <G filter="url(#prefix__filter0_d)">
+                        <Path
+                          d="M41 14a27 27 0 0127 27v49.68a27.001 27.001 0 01-54 0V41a27 27 0 0127-27z"
+                          fill="url(#prefix__paint0_radial)"
+                        />
+                      </G>
+                      <G filter="url(#prefix__filter1_d)">
+                        <Path
+                          d="M41.163 111.264a23.32 23.32 0 01-16.534-6.848 23.31 23.31 0 01-6.849-16.535V43.864a23.304 23.304 0 016.849-16.534 23.305 23.305 0 0116.534-6.849 23.305 23.305 0 0116.534 6.849 23.305 23.305 0 016.849 16.534v44.019a23.31 23.31 0 01-6.849 16.534 23.32 23.32 0 01-16.534 6.848z"
+                          fill="url(#prefix__paint1_linear)"
+                        />
+                        <Path
+                          d="M41.163 21.02a22.769 22.769 0 00-16.152 6.69 22.767 22.767 0 00-6.691 16.153v44.019a22.765 22.765 0 006.69 16.153 22.78 22.78 0 007.262 4.895 22.696 22.696 0 008.89 1.794c3.085 0 6.077-.603 8.892-1.794a22.78 22.78 0 007.261-4.896 22.765 22.765 0 006.69-16.153V43.864a22.767 22.767 0 00-6.69-16.152 22.77 22.77 0 00-16.152-6.69zm0-1.08c13.212 0 23.923 10.711 23.923 23.923v44.019c0 13.212-10.71 23.922-23.923 23.922-13.212 0-23.923-10.71-23.923-23.922V43.863c0-13.212 10.71-23.923 23.923-23.923z"
+                          fill="#CBCBCB"
+                        />
+                      </G>
+                      <G filter="url(#prefix__filter2_d)">
+                        <Path
+                          d="M64.654 43.83v1.905a24.113 24.113 0 00-6.546-11.993A24.11 24.11 0 0041 26.657a24.11 24.11 0 00-17.107 7.086 24.109 24.109 0 00-6.546 11.992V43.83a23.577 23.577 0 016.928-16.725A23.577 23.577 0 0141 20.176a23.577 23.577 0 0116.725 6.928 23.575 23.575 0 016.928 16.725z"
+                          fill="#AFAFAF"
+                        />
+                        <Path
+                          d="M64.383 43.634a23.306 23.306 0 00-6.848-16.338 23.306 23.306 0 00-16.534-6.85 23.308 23.308 0 00-16.534 6.849 23.306 23.306 0 00-6.848 16.339 24.379 24.379 0 016.084-10.082A24.377 24.377 0 0141 26.387a24.377 24.377 0 0117.298 7.165 24.38 24.38 0 016.084 10.082zm.54.195v7.005a23.842 23.842 0 00-7.007-16.9 23.84 23.84 0 00-16.915-7.007 23.84 23.84 0 00-16.916 7.007 23.843 23.843 0 00-7.007 16.916v-7.02a23.845 23.845 0 017.007-16.916A23.846 23.846 0 0141 19.905a23.847 23.847 0 0116.916 7.007 23.844 23.844 0 017.007 16.916z"
+                          fill="#CBCBCB"
+                        />
+                      </G>
+                      <G filter="url(#prefix__filter3_d)">
+                        <Path
+                          d="M24.26 66.11h32.5"
+                          stroke="#6A6A6A"
+                          strokeLinecap="round"
+                        />
+                      </G>
+                      <G filter="url(#prefix__filter4_d)">
+                        <Path
+                          d="M33.424 91.76H48.02"
+                          stroke="#4D4D4D"
+                          strokeWidth={3}
+                          strokeLinecap="round"
+                        />
+                      </G>
+                      <Path
+                        d="M41 47.21a7.29 7.29 0 100-14.58 7.29 7.29 0 000 14.58z"
+                        stroke="#4D4D4D"
+                        strokeWidth={3}
+                      />
+                      <Defs>
+                        <RadialGradient
+                          id="prefix__paint0_radial"
+                          cx={0}
+                          cy={0}
+                          r={1}
+                          gradientUnits="userSpaceOnUse"
+                          gradientTransform="matrix(34.344 0 0 51.8292 41 54.804)">
+                          <Stop stopColor="#9D9D9D" />
+                          <Stop offset={1} stopColor="#fff" />
+                        </RadialGradient>
+                        <LinearGradient
+                          id="prefix__paint1_linear"
+                          x1={41.163}
+                          y1={22.659}
+                          x2={41.163}
+                          y2={111.264}
+                          gradientUnits="userSpaceOnUse">
+                          <Stop stopColor="#EBEBEB" />
+                          <Stop offset={0.497} stopColor="#AFAFAF" />
+                          <Stop offset={1} stopColor="#EBEBEB" />
+                        </LinearGradient>
+                      </Defs>
+                    </Svg>
                   </View>
                 </View>
               ) : null}
               {deviceStatus === 'off' ? (
                 <View style={styles.modalContainerRollerImage}>
                   <Animated.Image
-                    source={require('../../assets/images/devices/rolleroff.png')}
+                    source={require('../../assets/images/rolleroff.png')}
                     style={{
                       width: 142,
                       height: 142,
@@ -238,17 +330,89 @@ const DeviceOn = (props): Node => {
                     }}
                   />
                   <View style={styles.modalContainerRollerSwitch}>
-                    <Image
-                      source={require('../../assets/images/devices/switchoff.png')}
-                      style={{width: 54, height: 103}}
-                    />
+                    <Svg
+                      width={54}
+                      height={103}
+                      viewBox="0 0 82 132"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <G filter="url(#prefix__filter0_d)">
+                        <Path
+                          d="M41 14a27 27 0 0127 27v49.68a27.001 27.001 0 01-54 0V41a27 27 0 0127-27z"
+                          fill="url(#prefix__paint0_radial)"
+                        />
+                      </G>
+                      <G filter="url(#prefix__filter1_d)">
+                        <Path
+                          d="M41.163 111.264a23.32 23.32 0 01-16.534-6.848 23.31 23.31 0 01-6.849-16.535V43.864a23.304 23.304 0 016.849-16.534 23.305 23.305 0 0116.534-6.849 23.305 23.305 0 0116.534 6.849 23.305 23.305 0 016.849 16.534v44.019a23.31 23.31 0 01-6.849 16.534 23.32 23.32 0 01-16.534 6.848z"
+                          fill="url(#prefix__paint1_linear)"
+                        />
+                        <Path
+                          d="M41.163 21.02a22.769 22.769 0 00-16.152 6.69 22.767 22.767 0 00-6.691 16.153v44.019a22.765 22.765 0 006.69 16.153 22.78 22.78 0 007.262 4.895 22.696 22.696 0 008.89 1.794c3.085 0 6.077-.603 8.892-1.794a22.78 22.78 0 007.261-4.896 22.765 22.765 0 006.69-16.153V43.864a22.767 22.767 0 00-6.69-16.152 22.77 22.77 0 00-16.152-6.69zm0-1.08c13.212 0 23.923 10.711 23.923 23.923v44.019c0 13.212-10.71 23.922-23.923 23.922-13.212 0-23.923-10.71-23.923-23.922V43.863c0-13.212 10.71-23.923 23.923-23.923z"
+                          fill="#CBCBCB"
+                        />
+                      </G>
+                      <G filter="url(#prefix__filter2_d)">
+                        <Path
+                          d="M64.654 88.02v-1.906a24.112 24.112 0 01-6.546 11.993A24.115 24.115 0 0141 105.193a24.115 24.115 0 01-17.107-7.086 24.11 24.11 0 01-6.546-11.993v1.906a23.573 23.573 0 006.928 16.725A23.577 23.577 0 0041 111.673a23.579 23.579 0 0016.725-6.928 23.573 23.573 0 006.928-16.725z"
+                          fill="#AFAFAF"
+                        />
+                        <Path
+                          d="M64.383 88.216a23.297 23.297 0 01-6.848 16.338 23.306 23.306 0 01-16.534 6.849 23.307 23.307 0 01-16.534-6.849 23.295 23.295 0 01-6.848-16.338 24.379 24.379 0 006.084 10.082A24.38 24.38 0 0041 105.463a24.38 24.38 0 0017.298-7.165 24.38 24.38 0 006.084-10.082zm.54-.196v-7.005a23.842 23.842 0 01-7.007 16.9 23.844 23.844 0 01-16.915 7.008 23.844 23.844 0 01-16.916-7.007A23.843 23.843 0 0117.078 81v7.02a23.84 23.84 0 007.007 16.916A23.846 23.846 0 0041 111.943a23.847 23.847 0 0016.916-7.007 23.84 23.84 0 007.007-16.916z"
+                          fill="#CBCBCB"
+                        />
+                      </G>
+                      <G filter="url(#prefix__filter3_d)">
+                        <Path
+                          d="M24.26 66.11h32.5"
+                          stroke="#6A6A6A"
+                          strokeLinecap="round"
+                        />
+                      </G>
+                      <G filter="url(#prefix__filter4_d)">
+                        <Path
+                          d="M33.424 91.76H48.02"
+                          stroke="#4D4D4D"
+                          strokeWidth={3}
+                          strokeLinecap="round"
+                        />
+                      </G>
+                      <Path
+                        d="M41 47.21a7.29 7.29 0 100-14.58 7.29 7.29 0 000 14.58z"
+                        stroke="#4D4D4D"
+                        strokeWidth={3}
+                      />
+                      <Defs>
+                        <RadialGradient
+                          id="prefix__paint0_radial"
+                          cx={0}
+                          cy={0}
+                          r={1}
+                          gradientUnits="userSpaceOnUse"
+                          gradientTransform="matrix(34.344 0 0 51.8292 41 54.804)">
+                          <Stop stopColor="#9D9D9D" />
+                          <Stop offset={1} stopColor="#fff" />
+                        </RadialGradient>
+                        <LinearGradient
+                          id="prefix__paint1_linear"
+                          x1={41.163}
+                          y1={22.659}
+                          x2={41.163}
+                          y2={111.264}
+                          gradientUnits="userSpaceOnUse">
+                          <Stop stopColor="#EBEBEB" />
+                          <Stop offset={0.497} stopColor="#AFAFAF" />
+                          <Stop offset={1} stopColor="#EBEBEB" />
+                        </LinearGradient>
+                      </Defs>
+                    </Svg>
                   </View>
                 </View>
               ) : null}
               {deviceStatus === 'on' ? (
                 <View style={styles.modalContainerRollerImage}>
                   <Animated.Image
-                    source={require('../../assets/images/devices/roller.png')}
+                    source={require('../../assets/images/roller.png')}
                     style={{
                       width: 142,
                       height: 142,
@@ -256,10 +420,82 @@ const DeviceOn = (props): Node => {
                     }}
                   />
                   <View style={styles.modalContainerRollerSwitch}>
-                    <Image
-                      source={require('../../assets/images/devices/switchon.png')}
-                      style={{width: 54, height: 103}}
-                    />
+                    <Svg
+                      width={54}
+                      height={103}
+                      viewBox="0 0 82 132"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <G filter="url(#prefix__filter0_d)">
+                        <Path
+                          d="M41 14a27 27 0 0127 27v49.68a27.001 27.001 0 01-54 0V41a27 27 0 0127-27z"
+                          fill="url(#prefix__paint0_radial)"
+                        />
+                      </G>
+                      <G filter="url(#prefix__filter1_d)">
+                        <Path
+                          d="M41.163 111.264a23.32 23.32 0 01-16.534-6.848 23.31 23.31 0 01-6.849-16.535V43.864a23.304 23.304 0 016.849-16.534 23.305 23.305 0 0116.534-6.849 23.305 23.305 0 0116.534 6.849 23.305 23.305 0 016.849 16.534v44.019a23.31 23.31 0 01-6.849 16.534 23.32 23.32 0 01-16.534 6.848z"
+                          fill="url(#prefix__paint1_linear)"
+                        />
+                        <Path
+                          d="M41.163 21.02a22.769 22.769 0 00-16.152 6.69 22.767 22.767 0 00-6.691 16.153v44.019a22.765 22.765 0 006.69 16.153 22.78 22.78 0 007.262 4.895 22.696 22.696 0 008.89 1.794c3.085 0 6.077-.603 8.892-1.794a22.78 22.78 0 007.261-4.896 22.765 22.765 0 006.69-16.153V43.864a22.767 22.767 0 00-6.69-16.152 22.77 22.77 0 00-16.152-6.69zm0-1.08c13.212 0 23.923 10.711 23.923 23.923v44.019c0 13.212-10.71 23.922-23.923 23.922-13.212 0-23.923-10.71-23.923-23.922V43.863c0-13.212 10.71-23.923 23.923-23.923z"
+                          fill="#CBCBCB"
+                        />
+                      </G>
+                      <G filter="url(#prefix__filter2_d)">
+                        <Path
+                          d="M64.654 43.83v1.905a24.113 24.113 0 00-6.546-11.993A24.11 24.11 0 0041 26.657a24.11 24.11 0 00-17.107 7.086 24.109 24.109 0 00-6.546 11.992V43.83a23.577 23.577 0 016.928-16.725A23.577 23.577 0 0141 20.176a23.577 23.577 0 0116.725 6.928 23.575 23.575 0 016.928 16.725z"
+                          fill="#AFAFAF"
+                        />
+                        <Path
+                          d="M64.383 43.634a23.306 23.306 0 00-6.848-16.338 23.306 23.306 0 00-16.534-6.85 23.308 23.308 0 00-16.534 6.849 23.306 23.306 0 00-6.848 16.339 24.379 24.379 0 016.084-10.082A24.377 24.377 0 0141 26.387a24.377 24.377 0 0117.298 7.165 24.38 24.38 0 016.084 10.082zm.54.195v7.005a23.842 23.842 0 00-7.007-16.9 23.84 23.84 0 00-16.915-7.007 23.84 23.84 0 00-16.916 7.007 23.843 23.843 0 00-7.007 16.916v-7.02a23.845 23.845 0 017.007-16.916A23.846 23.846 0 0141 19.905a23.847 23.847 0 0116.916 7.007 23.844 23.844 0 017.007 16.916z"
+                          fill="#CBCBCB"
+                        />
+                      </G>
+                      <G filter="url(#prefix__filter3_d)">
+                        <Path
+                          d="M24.26 66.11h32.5"
+                          stroke="#6A6A6A"
+                          strokeLinecap="round"
+                        />
+                      </G>
+                      <G filter="url(#prefix__filter4_d)">
+                        <Path
+                          d="M33.424 91.76H48.02"
+                          stroke="#4D4D4D"
+                          strokeWidth={3}
+                          strokeLinecap="round"
+                        />
+                      </G>
+                      <Path
+                        d="M41 47.21a7.29 7.29 0 100-14.58 7.29 7.29 0 000 14.58z"
+                        stroke="#4D4D4D"
+                        strokeWidth={3}
+                      />
+                      <Defs>
+                        <RadialGradient
+                          id="prefix__paint0_radial"
+                          cx={0}
+                          cy={0}
+                          r={1}
+                          gradientUnits="userSpaceOnUse"
+                          gradientTransform="matrix(34.344 0 0 51.8292 41 54.804)">
+                          <Stop stopColor="#9D9D9D" />
+                          <Stop offset={1} stopColor="#fff" />
+                        </RadialGradient>
+                        <LinearGradient
+                          id="prefix__paint1_linear"
+                          x1={41.163}
+                          y1={22.659}
+                          x2={41.163}
+                          y2={111.264}
+                          gradientUnits="userSpaceOnUse">
+                          <Stop stopColor="#EBEBEB" />
+                          <Stop offset={0.497} stopColor="#AFAFAF" />
+                          <Stop offset={1} stopColor="#EBEBEB" />
+                        </LinearGradient>
+                      </Defs>
+                    </Svg>
                   </View>
                 </View>
               ) : null}
